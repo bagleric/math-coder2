@@ -11,14 +11,29 @@ const routes = [
     component: Home
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: "/activity",
+    name: "Activity",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+      import(/* webpackChunkName: "activity" */ "../views/Activity.vue")
+  },
+  {
+    path: "/post-activity",
+    name: "PostActivity",
+    component: () =>
+      import(/* webpackChunkName: "postActivity" */ "../views/PostActivity.vue")
+  },
+  {
+    path: "/pre-activity",
+    name: "PreActivity",
+    component: () =>
+      import(/* webpackChunkName: "preActivity" */ "../views/PreActivity.vue")
+  },
+  {
+    path: "/table-of-contents",
+    name: "TableOfContents",
+    component: () => import(/*webpackChunkName: "table-of-contents" */ "../views/TableOfContents.vue")
   }
+  // TODO: Form component and route
 ];
 
 const router = new VueRouter({

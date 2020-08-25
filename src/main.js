@@ -4,6 +4,9 @@ import router from "./router";
 
 Vue.config.productionTip = false;
 
+//Add un-imported components to ignore list to prevent warnings.
+Vue.config.ignoredElements = ['field', 'block', 'category', 'xml', 'mutation', 'value', 'sep']
+
 new Vue({
   router,
   render: h => h(App)
