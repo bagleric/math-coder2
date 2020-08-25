@@ -1,12 +1,8 @@
 <template>
   <div class="home">
-    <div class="welcome-container">
-      welcome to
-      <span class="coder-text">math-coder</span>
-    </div>
-    <div class="start-activity-container">
-      <router-link :to="{ name: 'Activity' }" class="button-link">Activity</router-link>
-    </div>
+    <router-link :to="{ name: 'PreActivity' }" class="card secondary-color">Pre Activity</router-link>
+    <router-link :to="{ name: 'Activity' }" class="card secondary-color">Activity</router-link>
+    <router-link :to="{ name: 'PostActivity' }" class="card secondary-color">Post Activity</router-link>
   </div>
 </template>
 
@@ -22,5 +18,11 @@ export default {
   font-family: "Courier New", Courier, monospace;
   font-weight: bolder;
   font-size: larger;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
 }
 </style>
