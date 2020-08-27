@@ -1,8 +1,8 @@
 <template>
-  <div class="app-logo primary-color">
+  <v-btn text :to="{ name: 'Home' }" class="app-logo">
     <span class="math-text">MATH-</span>
     <span class="code-text">coder</span>
-  </div>
+  </v-btn>
 </template>
 
 <script lang="ts">

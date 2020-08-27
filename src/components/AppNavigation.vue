@@ -1,11 +1,8 @@
 <template>
-  <div class="app-navigation primary-color">
+  <div class="app-navigation">
     <app-logo></app-logo>
     <!-- TODO: Uncomment as needed -->
-    <div>
-      <router-link :to="{ name: 'Home' }" class="nav-link">Home</router-link>
-      <router-link :to="{ name: 'Activity' }" class="nav-link">Activity</router-link>
-    </div>
+    <v-btn :to="{ name: 'Activity' }">Activity</v-btn>
   </div>
 </template>
 
@@ -23,20 +20,10 @@ export default {
 
 <style scoped>
 .app-navigation {
-  padding: 1em;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1em;
-}
-
-.nav-link {
-  padding: 1em;
-  text-decoration-line: none;
-}
-
-.nav-link:hover {
-  background: inherit;
-  opacity: 0.8;
-  text-decoration-line: underline;
+  align-items: center;
+  grid-auto-flow: column;
 }
 </style>

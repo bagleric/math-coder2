@@ -31,7 +31,10 @@ const routes = [
   {
     path: "/table-of-contents",
     name: "TableOfContents",
-    component: () => import(/*webpackChunkName: "table-of-contents" */ "../views/TableOfContents.vue")
+    component: () =>
+      import(
+        /*webpackChunkName: "table-of-contents" */ "../views/TableOfContents.vue"
+      )
   }
   // TODO: Form component and route
 ];

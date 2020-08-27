@@ -1,8 +1,14 @@
 <template>
   <div class="home">
-    <router-link :to="{ name: 'PreActivity' }" class="card secondary-color">Pre Activity</router-link>
-    <router-link :to="{ name: 'Activity' }" class="card secondary-color">Activity</router-link>
-    <router-link :to="{ name: 'PostActivity' }" class="card secondary-color">Post Activity</router-link>
+    <v-card :to="{ name: 'PreActivity' }">
+      <v-card-title>Pre Activity</v-card-title>
+    </v-card>
+    <v-card :to="{ name: 'Activity' }">
+      <v-card-title>Activity</v-card-title>
+    </v-card>
+    <v-card :to="{ name: 'PostActivity' }">
+      <v-card-title>Post Activity</v-card-title>
+    </v-card>
   </div>
 </template>
 
@@ -18,6 +24,14 @@ export default {
   font-family: "Courier New", Courier, monospace;
   font-weight: bolder;
   font-size: larger;
+}
+
+.v-card {
+  display: grid;
+  padding: 1em;
+  margin: 1em;
+  place-content: center;
+  text-decoration: none;
 }
 
 .home {
