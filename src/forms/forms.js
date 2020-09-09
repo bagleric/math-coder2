@@ -37,14 +37,20 @@ Result {
 
 /* Reflection:{
     title:
-    text:
+    message:
 }
+*/
+
+/* Block
+    id: string;
+    limit: number;
 */
 
 /* Activity:{
     id: string;
     name: string;
-    blockIds: string[];
+    description: string;
+    blocks: Block[];
     prompt: string;
     preActivity: Form,
     postActivity: Form,

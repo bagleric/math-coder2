@@ -1,0 +1,207 @@
+{
+    "id": "dummymod-04d1-4a95-9965-d74c259e17fc",
+    "name": "Dummy Module",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lobortis feugiat vivamus at augue eget arcu dictum varius.",
+    "standards": [
+        {
+            "name": "Standard 1",
+            "id": "2.XX.1",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "name": "Standard 2",
+            "id": "3.XX.1",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    ],
+    "preModule": {
+        "inputs": [
+            {
+                "id": "dummymod-c0b3-4540-a7d1-413b6798e53b",
+                "label": "Faucibus a pellentesque sit amet porttitor eget dolor?",
+                "name": "dummymod-c0b3-4540-a7d1-413b6798e53b",
+                "options": {
+                    "sad": "Lorem",
+                    "neutral": "Et",
+                    "happy": "Venenatis"
+                },
+                "type": "select"
+            },
+            {
+                "id": "dummymod-c0b3-4408-b66a-39a383f0a58e",
+                "label": "Dapibus ultrices in iaculis nunc?",
+                "name": "dummymod-c0b3-4408-b66a-39a383f0a58e",
+                "options": {
+                    "sad": "Venenatis urna",
+                    "neutral": "Consectetur adipiscing",
+                    "happy": "Et"
+                },
+                "type": "select"
+            }
+        ],
+        "results": []
+    },
+    "postModule": {
+        "inputs": [
+            {
+                "id": "dummymod-1f12-4ef1-aeb0-64b1134bdebe",
+                "label": "Dapibus ultrices in iaculis nunc?",
+                "name": "dummymod-1f12-4ef1-aeb0-64b1134bdebe",
+                "options": {
+                    "sad": "Not very good",
+                    "neutral": "Okay",
+                    "happy": "Great"
+                },
+                "type": "select"
+            },
+            {
+                "id": "dummymod-7b43-4540-a7d1-413b6798e53b",
+                "label": "Faucibus a pellentesque sit amet porttitor eget dolor?",
+                "name": "dummymod-7b43-4540-a7d1-413b6798e53b",
+                "options": {
+                    "sad": "Hard",
+                    "neutral": "Okay",
+                    "happy": "Easy"
+                },
+                "type": "select"
+            }
+        ],
+        "results": []
+    },
+    "activities": [
+        {
+            "id": "dummymod-630b-47b3-932b-8146f8afbf58",
+            "name": "Nunc vel risus commodo",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "blocks": [
+                {
+                    "id": "TODO: ID",
+                    "limit": 0
+                },
+                {
+                    "id": "TODO: ID2",
+                    "limit": 0
+                }
+            ],
+            "prompt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "preActivity": {
+                "inputs": [
+                    {
+                        "id": "dummymod-a7d1-4540-a7d1-413b6798e53b",
+                        "label": "Faucibus a pellentesque sit amet porttitor eget dolor?",
+                        "name": "dummymod-a7d1-4540-a7d1-413b6798e53b",
+                        "options": {
+                            "sad": "Lorem",
+                            "neutral": "Et",
+                            "happy": "Venenatis"
+                        },
+                        "type": "select"
+                    },
+                    {
+                        "id": "dummymod-a7d1-4408-b66a-39a383f0a58e",
+                        "label": "Dapibus ultrices in iaculis nunc?",
+                        "name": "dummymod-a7d1-4408-b66a-39a383f0a58e",
+                        "options": {
+                            "sad": "Venenatis urna",
+                            "neutral": "Consectetur adipiscing",
+                            "happy": "Et"
+                        },
+                        "type": "select"
+                    }
+                ],
+                "results": []
+            },
+            "postActivity": {
+                "inputs": [
+                    {
+                        "id": "dummymod-a7d1-4540-a7d1-413u2798e53b",
+                        "label": "Faucibus a pellentesque sit amet porttitor eget dolor?",
+                        "name": "dummymod-a7d1-4540-a7d1-413u2798e53b",
+                        "options": {
+                            "sad": "Lorem",
+                            "neutral": "Et",
+                            "happy": "Venenatis"
+                        },
+                        "type": "select"
+                    },
+                    {
+                        "id": "dummymod-a7d1-4408-u26a-39a383f0a58e",
+                        "label": "Dapibus ultrices in iaculis nunc?",
+                        "name": "dummymod-a7d1-4408-u26a-39a383f0a58e",
+                        "options": {
+                            "sad": "Venenatis urna",
+                            "neutral": "Consectetur adipiscing",
+                            "happy": "Et"
+                        },
+                        "type": "select"
+                    }
+                ],
+                "results": []
+            },
+            "reflections": [
+                {
+                    "title": "Sem viverra",
+                    "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mi ipsum faucibus vitae."
+                },
+                {
+                    "title": "Viverra sem",
+                    "message": "Nunc mi ipsum faucibus vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                }
+            ]
+        },
+        {
+            "id": "dummymod-630b-47b3-932b-8146f8afbf58",
+            "name": "Connecting Lorem ipsum dolor sit amet",
+            "description": "Learn about lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "blocks": [
+                {
+                    "id": "TODO: ID",
+                    "limit": 0
+                }
+            ],
+            "prompt": "Tell the computer to draw 5 circles by connecting 5 circle blocks to the start block."
+        },
+        {
+            "id": "dummymod-2640-495e-bb30-342ca06b8e13",
+            "name": "The Repeat Block ",
+            "description": "Learn about the repeat block. In this activity you will observe the default behavior of the repeat block. You should expect it to repeat the action inside it the number of times found in the input.",
+            "blocks": [
+                {
+                    "id": "TODO: ID",
+                    "limit": 0
+                }
+            ],
+            "prompt": "Connect a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.."
+        },
+        {
+            "id": "dummymod-02f5-4b64-913e-d4ddf109667e",
+            "name": "Multiplying",
+            "description": "Explore multiplication again.",
+            "blocks": [
+                {
+                    "id": "TODO: ID",
+                    "limit": 0
+                }
+            ],
+            "prompt": "Tell the Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "reflections": [
+                {
+                    "title": "",
+                    "message": "If you Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "title": "",
+                    "message": "In math Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "title": "",
+                    "message": "If we had 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                    "title": "",
+                    "message": "To get our Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                }
+            ]
+        }
+    ]
+}

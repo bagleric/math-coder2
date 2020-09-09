@@ -14,12 +14,12 @@
             "description": "Interpret the products of whole numbers, such as interpreting 5 × 7 as the total number of objects in 5 groups of 7 objects each."
         }
     ],
-    "preActivity": {
+    "preModule": {
         "inputs": [
             {
                 "id": "e5992fd2-c0b3-4408-b66a-39a383f0a58e",
                 "label": "How do you feel about repeated addition?",
-                "name": "Adds a name attribute, and when used with <FormulateForm> this is the key of the field. If no name is defined a random hash will be assigned",
+                "name": "e5992fd2-c0b3-4408-b66a-39a383f0a58e",
                 "options": {
                     "sad": "Not very good",
                     "neutral": "Okay",
@@ -30,12 +30,12 @@
         ],
         "results": []
     },
-    "postActivity": {
+    "postModule": {
         "inputs": [
             {
                 "id": "f341062b-1f12-4ef1-aeb0-64b1134bdebe",
                 "label": "How do you feel about repeated addition?",
-                "name": "feeling",
+                "name": "f341062b-1f12-4ef1-aeb0-64b1134bdebe",
                 "options": {
                     "sad": "Not very good",
                     "neutral": "Okay",
@@ -46,7 +46,7 @@
             {
                 "id": "0287366a-7b43-4540-a7d1-413b6798e53b",
                 "label": "How hard was it to tell the computer to do our math?",
-                "name": "computer",
+                "name": "0287366a-7b43-4540-a7d1-413b6798e53b",
                 "options": {
                     "sad": "Hard",
                     "neutral": "Okay",
@@ -57,7 +57,7 @@
             {
                 "id": "99470828-6876-40bf-ac81-d6d544a6d34f",
                 "label": "Did you learn anything new?",
-                "name": "learn",
+                "name": "99470828-6876-40bf-ac81-d6d544a6d34f",
                 "options": {
                     "yes": "Thumbs-up",
                     "no": "Thumbs-down"
@@ -70,39 +70,129 @@
     "activities": [
         {
             "id": "c52d5add-630b-47b3-932b-8146f8afbf58",
-            "name": "",
-            "blockIds": [],
-            "prompt": "Tell the computer to draw 5 circles."
+            "name": "Start block and Circle block",
+            "description": "Learn about the start block and circle block",
+            "blocks": [
+                {
+                    "id": "TODO: ID",
+                    "limit": 0
+                }
+            ],
+            "prompt": "Tell the computer to draw a circle by connecting a draw circle block to the start block."
+        },
+        {
+            "id": "c52d5add-630b-47b3-932b-8146f8afbf58",
+            "name": "Connecting multiple blocks together",
+            "description": "Learn about connecting multiple blocks together",
+            "blocks": [
+                {
+                    "id": "TODO: ID",
+                    "limit": 0
+                }
+            ],
+            "prompt": "Tell the computer to draw 5 circles by connecting 5 circle blocks to the start block."
         },
         {
             "id": "3ef27a63-2640-495e-bb30-342ca06b8e13",
-            "name": "",
-            "blockIds": [],
-            "prompt": "Tell the computer to draw 5 circles using the repeat block."
+            "name": "The Repeat Block ",
+            "description": "Learn about the repeat block. In this activity you will observe the default behavior of the repeat block. You should expect it to repeat the action inside it the number of times found in the input.",
+            "blocks": [
+                {
+                    "id": "TODO: ID",
+                    "limit": 0
+                }
+            ],
+            "prompt": "Connect a repeat block to the start block and then place a circle block inside of the the repeat block."
         },
         {
             "id": "626ebc9a-ccf7-49a0-a337-067eebc93580",
-            "name": "",
-            "blockIds": [],
-            "prompt": "Tell the computer to draw 7 circles using the repeat block"
+            "name": "Adjusting the Repeat Block",
+            "description": "Learn how to adjust the repeat block.",
+            "blocks": [
+                {
+                    "id": "TODO: ID",
+                    "limit": 0
+                }
+            ],
+            "prompt": "Tell the computer to draw 7 circles using the repeat block by changing the number from 5 to 7."
         },
         {
             "id": "ec2475cf-621b-426e-8168-86b042650724",
-            "name": "",
-            "blockIds": [],
-            "prompt": "Tell the computer to draw 7 circles 7 times using two repeat blocks."
+            "name": "A lot of repeating",
+            "description": "Learn about placing one repeat block inside another one.",
+            "blocks": [
+                {
+                    "id": "TODO: ID",
+                    "limit": 0
+                }
+            ],
+            "prompt": "Place one of the repeat bocks inside another one. Then place a draw circle block into the repeat block.",
+            "reflections": [
+                {
+                    "title": "",
+                    "message": "We have just taught our computer to do repeated addition. We have several rows with the same number of items in each row. Repeated addition is also called multiplication. Multiplication is where we take groups of equal sizes and add all of their items together."
+                }
+            ]
+        },
+        {
+            "id": "ec2475cf-621b-426e-8168-86b042650724",
+            "name": "Multiplying using the repeat block",
+            "description": "Modify the defaults of the nested repeat blocks",
+            "blocks": [
+                {
+                    "id": "TODO: ID",
+                    "limit": 0
+                }
+            ],
+            "prompt": "Using the two repeat blocks, where one repeat block is inside another repeat block, tell the computer to multiply by drawing 3 circles 4 times.",
+            "reflections": [
+                {
+                    "title": "",
+                    "message": "If you counted all of the circles up you got 12 circles total."
+                }
+            ]
         },
         {
             "id": "6270b5df-02f5-4b64-913e-d4ddf109667e",
-            "name": "",
-            "blockIds": [],
-            "prompt": "Tell the computer to draw 7 groups of 5 circles where each group of circles is a different color."
+            "name": "Multiplying",
+            "description": "Explore multiplication again.",
+            "blocks": [
+                {
+                    "id": "TODO: ID",
+                    "limit": 0
+                }
+            ],
+            "prompt": "Tell the computer multiply by telling it to repeat 4 circles 3 times.",
+            "reflections": [
+                {
+                    "title": "",
+                    "message": "If you counted all of the circles up you got 12 circles again. That was the same as last time. 3 groups of 4 adds up to the same number as 4 groups of 3"
+                },
+                {
+                    "title": "",
+                    "message": "In math we write it like this 3 x 4 = 12\n This means that we have 3 groups of 4 items and there are 12 items total."
+                },
+                {
+                    "title": "",
+                    "message": "If we had 5 groups of 3 items, we would write it like this: 5 x 3"
+                },
+                {
+                    "title": "",
+                    "message": "To get our computer to do this for us we would use 2 repeat blocks like before. Then we would modify the first one to have 5 as its value and the second one would have 3 as its value."
+                }
+            ]
         },
         {
             "id": "1ddb9234-5940-44c1-a595-6122373e3be4",
-            "name": "",
-            "blockIds": [],
-            "prompt": "How many circles do we have total? How many circles are there if we have 7 groups of 5 circles?"
+            "name": "Applying multiplication",
+            "description": "Solve the multiplication problem",
+            "blocks": [
+                {
+                    "id": "TODO: ID",
+                    "limit": 0
+                }
+            ],
+            "prompt": "Tell the computer to multiply: 5 x 3"
         }
     ]
 }
