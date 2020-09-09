@@ -13,9 +13,12 @@
 </template>
 
 <script>
+// import AppReflection from "@/components/Reflection.vue";
 export default {
   name: "Home",
-  components: {}
+  components: {
+    // AppReflection
+  }
 };
 </script>
 
