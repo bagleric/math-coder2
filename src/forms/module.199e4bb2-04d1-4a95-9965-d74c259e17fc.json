@@ -1,0 +1,108 @@
+{
+    "id": "199e4bb2-04d1-4a95-9965-d74c259e17fc",
+    "name": "",
+    "description": "Help students understand the concept of grouping and repeated grouping.",
+    "standards": [
+        {
+            "name": "",
+            "id": "2.0A.4",
+            "description": ""
+        },
+        {
+            "name": "",
+            "id": "3.OA.1",
+            "description": "Interpret the products of whole numbers, such as interpreting 5 × 7 as the total number of objects in 5 groups of 7 objects each."
+        }
+    ],
+    "preActivity": {
+        "inputs": [
+            {
+                "id": "e5992fd2-c0b3-4408-b66a-39a383f0a58e",
+                "label": "How do you feel about repeated addition?",
+                "name": "Adds a name attribute, and when used with <FormulateForm> this is the key of the field. If no name is defined a random hash will be assigned",
+                "options": {
+                    "sad": "Not very good",
+                    "neutral": "Okay",
+                    "happy": "Great"
+                },
+                "type": "select"
+            }
+        ],
+        "results": []
+    },
+    "postActivity": {
+        "inputs": [
+            {
+                "id": "f341062b-1f12-4ef1-aeb0-64b1134bdebe",
+                "label": "How do you feel about repeated addition?",
+                "name": "feeling",
+                "options": {
+                    "sad": "Not very good",
+                    "neutral": "Okay",
+                    "happy": "Great"
+                },
+                "type": "select"
+            },
+            {
+                "id": "0287366a-7b43-4540-a7d1-413b6798e53b",
+                "label": "How hard was it to tell the computer to do our math?",
+                "name": "computer",
+                "options": {
+                    "sad": "Hard",
+                    "neutral": "Okay",
+                    "happy": "Easy"
+                },
+                "type": "select"
+            },
+            {
+                "id": "99470828-6876-40bf-ac81-d6d544a6d34f",
+                "label": "Did you learn anything new?",
+                "name": "learn",
+                "options": {
+                    "yes": "Thumbs-up",
+                    "no": "Thumbs-down"
+                },
+                "type": "select"
+            }
+        ],
+        "results": []
+    },
+    "activities": [
+        {
+            "id": "c52d5add-630b-47b3-932b-8146f8afbf58",
+            "name": "",
+            "blockIds": [],
+            "prompt": "Tell the computer to draw 5 circles."
+        },
+        {
+            "id": "3ef27a63-2640-495e-bb30-342ca06b8e13",
+            "name": "",
+            "blockIds": [],
+            "prompt": "Tell the computer to draw 5 circles using the repeat block."
+        },
+        {
+            "id": "626ebc9a-ccf7-49a0-a337-067eebc93580",
+            "name": "",
+            "blockIds": [],
+            "prompt": "Tell the computer to draw 7 circles using the repeat block"
+        },
+        {
+            "id": "ec2475cf-621b-426e-8168-86b042650724",
+            "name": "",
+            "blockIds": [],
+            "prompt": "Tell the computer to draw 7 circles 7 times using two repeat blocks."
+        },
+        {
+            "id": "6270b5df-02f5-4b64-913e-d4ddf109667e",
+            "name": "",
+            "blockIds": [],
+            "prompt": "Tell the computer to draw 7 groups of 5 circles where each group of circles is a different color."
+        },
+        {
+            "id": "1ddb9234-5940-44c1-a595-6122373e3be4",
+            "name": "",
+            "blockIds": [],
+            "prompt": "How many circles do we have total? How many circles are there if we have 7 groups of 5 circles?"
+        }
+    ]
+}
