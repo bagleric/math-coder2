@@ -31,7 +31,7 @@ Result {
 
 /* Form: {
     inputs: FormInput[];
-    results: any[];// (mainly text or number)
+    results: {};// (mainly text or number)
 }
 */
 
@@ -55,6 +55,7 @@ Result {
     preActivity: Form,
     postActivity: Form,
     reflections: Reflection[];
+    verification: ?
 }
 */
 

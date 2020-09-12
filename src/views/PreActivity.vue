@@ -1,6 +1,6 @@
 <template>
   <div class="pre-activity">
-    <FormulateInput label="Change an input type" type="radio" :options="types" v-model="type" />
+    <!-- <FormulateInput label="Change an input type" type="radio" :options="types" v-model="type" />
     <FormulateInput
       label="Favorite B10 football team?"
       :type="type"
@@ -27,17 +27,26 @@
         <v-btn text color="success" @click="processForm">Skip</v-btn>
         <v-btn color="success" @click="processForm">Next</v-btn>
       </div>
-    </v-form>
+    </v-form>-->
+    <AppForm
+      :inputs="store.preModule.inputs"
+      :results="store.preModule.results"
+      :multiple="true"
+      @form-complete="formComplete"
+    ></AppForm>
   </div>
 </template>
 
 
 <script>
 // import FormulateInput from
+import store from "@/forms/module.199e4bb2-04d1-4a95-9965-d74c259e17fc.json";
+import AppForm from "@/components/AppForm.vue";
 
 export default {
   name: "PreActivity",
   data: () => ({
+    store,
     emotions: [
       {
         key: "feeling",
@@ -120,14 +129,16 @@ export default {
       }
     ]
   }),
-  // components:{
-  //   FormulateInput
-  // }
+  components: { AppForm },
   methods: {
     processForm() {
       //TODO: submit this information to the database.
       console.log({ selected: this.selectedEmotion });
       this.$router.push({ name: "Activity" });
+    },
+    formComplete(data) {
+      console.log("Received", { data });
+      this.processForm();
     }
   }
 };

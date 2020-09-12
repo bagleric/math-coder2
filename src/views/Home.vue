@@ -14,10 +14,12 @@
 
 <script>
 // import AppReflection from "@/components/Reflection.vue";
+// import AppForm from "@/components/Reflection.vue";
 export default {
   name: "Home",
   components: {
     // AppReflection
+    // AppForm
   }
 };
 </script>
