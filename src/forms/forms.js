@@ -42,6 +42,7 @@ Result {
 */
 
 /* Block
+    type: string;
     id: string;
     limit: number;
 */

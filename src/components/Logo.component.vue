@@ -5,9 +5,21 @@
   </v-btn>
 </template>
 
-<script lang="ts">
+<script>
+import anime from "animejs/lib/anime.es.js";
 export default {
-  name: "AppLogo"
+  name: "AppLogo",
+  mounted: function() {
+    this.$nextTick(function() {
+      // Code that will run only after the
+      // entire view has been rendered
+      anime({
+        targets: ".app-logo span",
+        rotate: "2turn",
+        duration: 2000
+      });
+    });
+  }
 };
 </script>
 

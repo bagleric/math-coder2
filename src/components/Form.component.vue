@@ -16,11 +16,11 @@
           v-for="item in inputs"
           :key="item.name"
           v-bind="item"
-          v-show="inputs[theIter-1].name == item.name"
+          v-show="inputs[iter - 1].name == item.name"
         />
       </FormulateForm>
-      <v-btn v-show="theIter > 1" @click="decrementIter">Previous</v-btn>
-      <v-btn v-if="theIter < inputs.length" @click="incrementIter">Next</v-btn>
+      <v-btn v-show="iter > 1" @click="decrementIter">Previous</v-btn>
+      <v-btn v-if="iter < inputs.length" @click="incrementIter">Next</v-btn>
       <v-btn v-else @click="submitForm">Submit</v-btn>
     </div>
   </div>
@@ -43,12 +43,7 @@ export default {
       iter: 1
     };
   },
-  computed: {
-    theIter() {
-      console.log(this.iter);
-      return this.iter;
-    }
-  },
+  computed: {},
 
   methods: {
     formUpdated(newValues) {
@@ -60,7 +55,6 @@ export default {
     },
     decrementIter() {
       if (this.iter > 1) this.iter--;
-      console.log(this.iter);
     },
     submitHandler(data) {
       console.log("Submitting Data", { data });

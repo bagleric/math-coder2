@@ -1,26 +1,21 @@
 <template>
   <div class="home">
-    <v-card :to="{ name: 'PreActivity' }">
+    <!-- <v-card :to="{ name: 'PreActivity' }">
       <v-card-title>Pre Activity</v-card-title>
+    </v-card> -->
+    <v-card :to="{ name: 'Modules' }">
+      <v-card-title>Modules</v-card-title>
     </v-card>
-    <v-card :to="{ name: 'Activity' }">
-      <v-card-title>Activity</v-card-title>
-    </v-card>
-    <v-card :to="{ name: 'PostActivity' }">
+    <!-- <v-card :to="{ name: 'PostActivity' }">
       <v-card-title>Post Activity</v-card-title>
-    </v-card>
+    </v-card> -->
   </div>
 </template>
 
 <script>
-// import AppReflection from "@/components/Reflection.vue";
-// import AppForm from "@/components/Reflection.vue";
 export default {
-  name: "Home",
-  components: {
-    // AppReflection
-    // AppForm
-  }
+  name: "ViewHome",
+  components: {}
 };
 </script>
 
