@@ -1,5 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import ViewHello from "../views/Hello.view.vue";
 import ViewHome from "../views/Home.view.vue";
 // import ViewActivity from "../views/Activity.view.vue";
 // import store from "@/forms/module.199e4bb2-04d1-4a95-9965-d74c259e17fc.json";
@@ -9,6 +10,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
+    name: "Hello",
+    component: ViewHello
+  },
+  {
+    path: "/home",
     name: "Home",
     component: ViewHome
   },

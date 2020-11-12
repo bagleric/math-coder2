@@ -1,18 +1,18 @@
 <template>
   <div class="module">
     <h1>{{ theModule.name }}</h1>
-    <span>{{ theModule.id }}</span>
-    <h2>{{ theModule.description }}</h2>
-    <span v-for="standard in theModule.standards" v-bind:key="standard.id">
+    <!-- <span>{{ theModule.id }}</span> -->
+    <!-- <h2>{{ theModule.description }}</h2> -->
+    <!-- <span v-for="standard in theModule.standards" v-bind:key="standard.id">
       <div>Name: {{ standard.name }}</div>
       <div>ID: {{ standard.id }}</div>
       <div>Description: {{ standard.description }}</div>
-    </span>
+    </span> -->
     <!-- TODO: add premodule quiz -->
     <v-btn
       :to="{
         name: 'PreActivity',
-        params: { moduleId }
+        params: { moduleId },
       }"
       >Start</v-btn
     >
@@ -36,12 +36,12 @@ export default {
   name: "AppModule",
   components: {},
   props: {
-    moduleId: { required: true, type: String }
+    moduleId: { required: true, type: String },
   },
   data: () => ({
     //TODO actually get this from the store/database with the moduleId
-    theModule: store[0]
-  })
+    theModule: store[0],
+  }),
 };
 </script>
 

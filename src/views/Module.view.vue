@@ -10,13 +10,18 @@ import AppModule from "@/components/Module.component.vue";
 export default {
   name: "ViewModule",
   components: {
-    AppModule
+    AppModule,
   },
   props: {
-    moduleId: { required: true, type: String }
-  }
+    moduleId: { required: true, type: String },
+  },
 };
 </script>
 
 <style scoped>
+.view-module {
+  display: grid;
+  margin: 3em auto auto;
+  justify-content: center;
+}
 </style>
