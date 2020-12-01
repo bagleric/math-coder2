@@ -1,9 +1,9 @@
 <template>
   <div class="blocklyArea" ref="blocklyArea">
-    <div class="blocklyDiv" ref="blocklyDiv"></div>
-    <xml ref="blocklyToolbox" style="display:none">
+    <xml ref="blocklyToolbox" style="display: none">
       <slot></slot>
     </xml>
+    <div class="blocklyDiv" ref="blocklyDiv"></div>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   props: ["options"],
   data() {
     return {
-      workspace: null
+      workspace: null,
     };
   },
   mounted() {
@@ -28,7 +28,7 @@ export default {
     this.workspace = Blockly.inject(blocklyDiv, options);
 
     var wksp = this.workspace;
-    var onresize = function() {
+    var onresize = function () {
       // Compute the absolute coordinates and dimensions of blocklyArea.
       let element = blocklyArea;
       var x = 0;
@@ -48,7 +48,7 @@ export default {
     window.addEventListener("resize", onresize, false);
     onresize();
     Blockly.svgResize(this.workspace);
-  }
+  },
 };
 </script>
 

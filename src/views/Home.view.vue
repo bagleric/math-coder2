@@ -1,21 +1,15 @@
 <template>
   <div class="home">
-    <!-- <v-card :to="{ name: 'PreActivity' }">
-      <v-card-title>Pre Activity</v-card-title>
-    </v-card> -->
     <v-card :to="{ name: 'Modules' }">
       <v-card-title>Modules</v-card-title>
     </v-card>
-    <!-- <v-card :to="{ name: 'PostActivity' }">
-      <v-card-title>Post Activity</v-card-title>
-    </v-card> -->
   </div>
 </template>
 
 <script>
 export default {
   name: "ViewHome",
-  components: {}
+  components: {},
 };
 </script>
 
@@ -36,7 +30,7 @@ export default {
 
 .home {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+  margin: 3em auto auto;
+  justify-content: center;
 }
 </style>

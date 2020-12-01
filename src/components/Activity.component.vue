@@ -1,15 +1,16 @@
 <template>
   <div class="activity-view">
-    <h2>{{ c_activity.name }}</h2>
-    <AppBlockly ref="activityBlockly">
+    <!-- <h2>{{ c_activity.name }}</h2> -->
+    <header class="blocks-header">Blocks</header>
+    <header class="prompt"></header>
+    <AppBlockly class="app-blockly" ref="activityBlockly">
       <block
         v-for="theBlock in c_activity.blocks"
         :key="theBlock.type"
         :type="theBlock.type"
       ></block>
     </AppBlockly>
-
-    <div id="code">
+    <div class="view" id="code">
       <button v-on:click="showCode()">Show JavaScript</button>
       <button v-on:click="submitCode()">Done</button>
       <pre v-html="code"></pre>
@@ -25,20 +26,20 @@ import "@/blocks/block1.js";
 export default {
   name: "AppActivity",
   components: {
-    AppBlockly
+    AppBlockly,
   },
   props: {
     // activityId: { type: String, required: true },
     moduleId: { type: String, required: true },
-    activityNum: { type: Number, required: true }
+    activityNum: { type: Number, required: true },
   },
   data: () => ({
-    code: ""
+    code: "",
   }),
   computed: {
     c_activity() {
       let theModuleId = this.moduleId;
-      let theModule = store.find(item => {
+      let theModule = store.find((item) => {
         return item.id === theModuleId;
       });
       if (
@@ -48,7 +49,7 @@ export default {
         return theModule.activities[this.activityNum];
       }
       throw `${this.activityNum} ${theModule.activities.length} Error, activity num is not valid`;
-    }
+    },
   },
   methods: {
     // getActivity() {
@@ -72,8 +73,8 @@ export default {
       this.$emit("activity-complete", this.code);
 
       this.$router.push({ name: "PostActivity" });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -82,8 +83,21 @@ export default {
   height: 100%;
   display: grid;
   grid-template:
-    "canvas" 2fr
-    "code" 1fr
-    / auto;
+    " blocks-header" "prompt    " "prompt" 4em
+    " AppBlockly   " "AppBlockly" "view  " 1fr
+    / auto auto auto;
+}
+
+.blocks-header {
+  grid-area: blocks-header;
+}
+.prompt {
+  grid-area: prompt;
+}
+.app-blockly {
+  grid-area: app-blockly;
+}
+.view {
+  grid-area: view;
 }
 </style>

@@ -13,7 +13,7 @@ export default {
   components: { AppActivity },
   props: {
     moduleId: { type: String, required: true },
-    activityNum: { type: Number, required: false }
+    activityNum: { type: Number, required: false },
   },
   computed: {
     // theActivityId() {
@@ -27,9 +27,12 @@ export default {
     //   }
     //   return this.activityId;
     // }
-  }
+  },
 };
 </script>
 
 <style scoped>
+.view-activity {
+  height: 100%;
+}
 </style>
