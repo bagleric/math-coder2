@@ -1,4 +1,5 @@
 /* FormInput
+see Formulate Documentation for input props: https://vueformulate.com/guide/inputs/#props
 FormInput:{
     "error": "A custom error message to be manually shown on an element(validation errors are generated on their own). This error will always  be visible (if you want to remove it, use a dynamic prop).",
     "errors": "An array of custom error messages to show on an element (see above).",;
@@ -31,13 +32,7 @@ Result {
 
 /* Form: {
     inputs: FormInput[];
-    results: {};// (mainly text or number)
-}
-*/
-
-/* Reflection:{
-    title:
-    message:
+    results: Result[];
 }
 */
 
@@ -53,10 +48,8 @@ Result {
     description: string;
     blocks: Block[];
     prompt: string;
-    preActivity: Form,
-    postActivity: Form,
-    reflections: Reflection[];
-    verification: ?
+    reflections: string[];
+    verification: string;
 }
 */
 
@@ -74,15 +67,5 @@ Result {
     preModule: Form,
     postModule: Form,
     activities: Activity[],
-
-}
-
-{
-    "name": "";
-    "description": "";
-    "standards": Standard[];
-    "preActivity": Form;
-    "postActivity": Form;
-    "activities": Activity[];
 }
 */

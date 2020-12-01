@@ -58,10 +58,7 @@
                 ],
                 "prompt": "Drag a start block and a circle block onto the canvas and connect them together.",
                 "reflections": [
-                    {
-                        "title": "",
-                        "message": "By connecting the two blocks you told the computer to draw a circle. You have written code!"
-                    }
+                    "By connecting the two blocks you told the computer to draw a circle. You have written code!"
                 ]
             },
             {
@@ -77,10 +74,7 @@
                 ],
                 "prompt": "Tell the computer to draw 5 circles by connecting 5 circle blocks to the start block.",
                 "reflections": [
-                    {
-                        "title": "",
-                        "message": "We are telling our computer to add. In this case our equation looks like this: 1 circle + 1 circle + 1 circle + 1 circle + 1 circle = 5 circles"
-                    }
+                    "We are telling our computer to add. In this case our equation looks like this: 1 circle + 1 circle + 1 circle + 1 circle + 1 circle = 5 circles"
                 ]
             },
             {
@@ -96,10 +90,7 @@
                 ],
                 "prompt": "Connect a repeat block to the start block and then place a circle block inside of the repeat block.",
                 "reflections": [
-                    {
-                        "title": "",
-                        "message": "We just told the computer to do the same thing as before. This time we only used two blocks."
-                    }
+                    "We just told the computer to do the same thing as before. This time we only used two blocks."
                 ]
             },
             {
@@ -128,10 +119,7 @@
                 ],
                 "prompt": "Place one of the repeat blocks inside another one. Then place a draw circle block into the repeat block.",
                 "reflections": [
-                    {
-                        "title": "",
-                        "message": "We have just taught our computer to do repeated addition. We have several rows with the same number of items in each row. Repeated addition is also called multiplication. Multiplication is where we take groups of equal sizes and add all of their items together."
-                    }
+                    "We have just taught our computer to do repeated addition. We have several rows with the same number of items in each row. Repeated addition is also called multiplication. Multiplication is where we take groups of equal sizes and add all of their items together."
                 ]
             },
             {
@@ -147,10 +135,7 @@
                 ],
                 "prompt": "Using the two repeat blocks, where one repeat block is inside another repeat block, tell the computer to multiply by drawing 3 circles 4 times.",
                 "reflections": [
-                    {
-                        "title": "",
-                        "message": "By counting we know that there are 12 circles total."
-                    }
+                    "By counting we know that there are 12 circles total."
                 ]
             },
             {
@@ -166,22 +151,10 @@
                 ],
                 "prompt": "Tell the computer multiply by telling it to repeat 4 circles 3 times.",
                 "reflections": [
-                    {
-                        "title": "",
-                        "message": "By counting all the circles we know that there are 12 circles again. That was the same as last time. 3 groups of 4 makes the same number as 4 groups of 3."
-                    },
-                    {
-                        "title": "",
-                        "message": "In math we write it like this: 3 x 4 = 12\n This means that we have 3 groups of 4 items and there are 12 items total."
-                    },
-                    {
-                        "title": "",
-                        "message": "If we had 5 groups of 3 items, we would write it like this: 5 x 3"
-                    },
-                    {
-                        "title": "",
-                        "message": "To get our computer to do this for us we would use 2 repeat blocks like before. Then we would modify the first one to have 5 as its value and the second one would have 3 as its value."
-                    }
+                    "By counting all the circles we know that there are 12 circles again. That was the same as last time. 3 groups of 4 makes the same number as 4 groups of 3.",
+                    "In math we write it like this: 3 x 4 = 12\n This means that we have 3 groups of 4 items and there are 12 items total.",
+                    "If we had 5 groups of 3 items, we would write it like this: 5 x 3",
+                    "To get our computer to do this for us we would use 2 repeat blocks like before. Then we would modify the first one to have 5 as its value and the second one would have 3 as its value."
                 ]
             },
             {
