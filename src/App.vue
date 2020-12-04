@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
+    <v-app-bar app color="white">
       <AppNavigation class="navigation"></AppNavigation>
     </v-app-bar>
     <v-main>
@@ -15,12 +15,12 @@ import AppNavigation from "./components/Navigation.component.vue";
 export default {
   name: "App",
   components: {
-    AppNavigation
+    AppNavigation,
   },
 
   data: () => ({
     //
-  })
+  }),
 };
 </script>
 
