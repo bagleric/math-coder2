@@ -54,13 +54,10 @@ export default {
 
 <style scoped>
 .blocklyDiv {
-  background: purple;
-
   height: 100%;
   width: 100%;
 }
 .blocklyArea {
-  background: green;
   height: 100%;
   width: 100%;
 }
