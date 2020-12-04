@@ -2,7 +2,7 @@
   <div class="activity-view">
     <!-- <h2>{{ c_activity.name }}</h2> -->
     <header class="blocks-header">Blocks</header>
-    <header class="prompt"></header>
+    <header class="prompt primary white--text">{{ c_activity.prompt }}</header>
     <AppBlockly class="app-blockly" ref="activityBlockly">
       <block
         v-for="theBlock in c_activity.blocks"
@@ -11,6 +11,7 @@
       ></block>
     </AppBlockly>
     <div class="view" id="code">
+      <h2>View</h2>
       <button v-on:click="showCode()">Show JavaScript</button>
       <button v-on:click="submitCode()">Done</button>
       <pre v-html="code"></pre>
@@ -83,21 +84,30 @@ export default {
   height: 100%;
   display: grid;
   grid-template:
-    " blocks-header" "prompt    " "prompt" 4em
-    " AppBlockly   " "AppBlockly" "view  " 1fr
-    / auto auto auto;
+    " blocksHeader prompt     prompt" 3em
+    " appBlockly   appBlockly view  " 1fr / 140px 2fr 2fr;
 }
 
 .blocks-header {
-  grid-area: blocks-header;
+  grid-area: blocksHeader;
+  border: solid 1px grey;
+  display: grid;
+  place-content: center;
+  font-weight: bolder;
 }
 .prompt {
   grid-area: prompt;
+  border: solid 1px grey;
+  display: grid;
+  align-content: center;
+  padding: 1em;
 }
 .app-blockly {
-  grid-area: app-blockly;
+  border: solid 1px grey;
+  grid-area: appBlockly;
 }
 .view {
+  border: solid 1px grey;
   grid-area: view;
 }
 </style>

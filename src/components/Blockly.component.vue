@@ -18,7 +18,21 @@ export default {
     };
   },
   mounted() {
-    var options = this.$props.options || {};
+    var options = this.$props.options || {
+      toolbox: this.$refs["blocklyToolbox"],
+      collapse: false,
+      comments: true,
+      maxBlocks: 5,
+      trashcan: true,
+      horizontalLayout: false,
+      toolboxPosition: "start",
+      css: false,
+      rtl: false,
+      scrollbars: false,
+      sounds: true,
+      oneBasedIndex: true,
+    };
+
     if (!options.toolbox) {
       options.toolbox = this.$refs["blocklyToolbox"];
     }
@@ -54,13 +68,10 @@ export default {
 
 <style scoped>
 .blocklyDiv {
-  background: purple;
-
   height: 100%;
   width: 100%;
 }
 .blocklyArea {
-  background: green;
   height: 100%;
   width: 100%;
 }
