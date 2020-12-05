@@ -1,5 +1,5 @@
 <template>
-  <div class="view-Activities">
+  <div class="view-activities">
     <AppActivities
       :moduleId="moduleId"
       :activityNum="activityNum"
@@ -15,10 +15,17 @@ export default {
   components: { AppActivities },
   props: {
     moduleId: { required: true, type: String },
-    activityNum: { required: false, type: Number, default: 0 }
-  }
+    activityNum: { required: false, type: Number, default: 0 },
+  },
 };
 </script>
 
 <style scoped>
+.view-activities {
+  height: 100%;
+}
+
+.activities {
+  height: 100%;
+}
 </style>

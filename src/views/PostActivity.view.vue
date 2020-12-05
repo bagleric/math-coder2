@@ -12,14 +12,14 @@ import AppPostActivity from "@/components/PostActivity.component.vue";
 export default {
   name: "ViewPostActivity",
   props: {
-    moduleId: { required: true, type: String }
+    moduleId: { required: true, type: String },
   },
-  data: function() {
+  data: function () {
     return {
-      store
+      store,
     };
   },
-  components: { AppPostActivity }
+  components: { AppPostActivity },
 };
 </script>
 

@@ -34,13 +34,13 @@ export default {
     results: Object, // object with the results
     multiple: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data: () => {
     return {
       formValues: {},
-      iter: 1
+      iter: 1,
     };
   },
   computed: {},
@@ -51,20 +51,18 @@ export default {
     },
     incrementIter() {
       this.iter++;
-      console.log(this.iter);
+      this.iter;
     },
     decrementIter() {
       if (this.iter > 1) this.iter--;
     },
     submitHandler(data) {
-      console.log("Submitting Data", { data });
       this.$emit("form-complete", data);
     },
     submitForm() {
-      console.log("submitting form", this.formValues);
       this.$emit("form-complete", this.formValues);
-    }
-  }
+    },
+  },
 };
 </script>
 

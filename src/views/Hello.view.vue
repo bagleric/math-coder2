@@ -21,7 +21,6 @@ export default {
   },
   methods: {
     submitForm() {
-      console.log("submitting form", this.formValues);
       // TODO: save user name
       this.$emit("form-complete", this.formValues);
       this.$router.push({

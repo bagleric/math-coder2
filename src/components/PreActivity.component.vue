@@ -19,37 +19,33 @@ export default {
   name: "PreActivity",
   components: { AppForm },
   props: {
-    moduleId: { required: true, type: String }
-    // activityId: { required: true, type: String }
+    moduleId: { required: true, type: String },
   },
-  // data: function() {},
   computed: {
     theModule() {
       let moduleId = this.moduleId;
-      let mod = store.find(item => {
+      let mod = store.find((item) => {
         return moduleId === item.id;
       });
       return mod;
-    }
+    },
   },
   methods: {
     processForm() {
       //TODO: submit this information to the database.
-      console.log({ selected: this.selectedEmotion });
       this.$router.push({
-        name: "Activity",
+        name: "Activities",
         params: {
           moduleId: this.moduleId,
-          // activityId: this.theModule.activities[0].id,
-          activityNum: 1
-        }
+          activityNum: 1,
+        },
       });
     },
     formComplete(data) {
-      console.log("Received", { data });
+      console.log({ data });
       this.processForm();
-    }
-  }
+    },
+  },
 };
 </script>
 

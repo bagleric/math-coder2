@@ -30,16 +30,13 @@ const routes = [
     props: true,
     component: () =>
       import(/* webpackChunkName: "module" */ "../views/Module.view.vue"),
-    children: [
-
-      {
-        name: "PostActivity",
-        path: "post-activity",
-        props: true,
-        component: () =>
-          import(/* webpackChunkName: "module/post-activity" */ "../views/PostActivity.view.vue")
-      },
-    ]
+  },
+  {
+    name: "PostActivity",
+    path: "/modules/:moduleId/post-activity",
+    props: true,
+    component: () =>
+      import(/* webpackChunkName: "module/post-activity" */ "../views/PostActivity.view.vue")
   },
   {
     name: "PreActivity",
@@ -52,13 +49,13 @@ const routes = [
     name: "Activities",
     path: "/modules/:moduleId/activities",
     props: (route) => {
-      const activityNum = Number.parseInt(route.params.activityNum, 10)
+      let activityNum = Number.parseInt(route.params.activityNum, 10)
       if (Number.isNaN(activityNum)) {
-        // return 0
+        activityNum = 0;
       }
       return {
         moduleId: route.params.moduleId,
-        activityNum: 0
+        activityNum
       };
     },
     component: () =>

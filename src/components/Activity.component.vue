@@ -30,7 +30,6 @@ export default {
     AppBlockly,
   },
   props: {
-    // activityId: { type: String, required: true },
     moduleId: { type: String, required: true },
     activityNum: { type: Number, required: true },
   },
@@ -53,17 +52,6 @@ export default {
     },
   },
   methods: {
-    // getActivity() {
-    //   // console.log(store);
-    //   // id = this.activityId;
-    //   let theModuleId = this.moduleId;
-    //   let theModule = store.find(item => {
-    //     return item.id === theModuleId;
-    //   });
-    //   theModule.activities[this.moduleId].activities.find(item => {
-    //     return id === item.id;
-    //   });
-    // },
     showCode() {
       this.code = BlocklyJS.workspaceToCode(
         this.$refs["activityBlockly"].workspace
@@ -72,8 +60,6 @@ export default {
     submitCode() {
       // TODO submit code
       this.$emit("activity-complete", this.code);
-
-      this.$router.push({ name: "PostActivity" });
     },
   },
 };

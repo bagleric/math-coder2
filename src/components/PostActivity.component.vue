@@ -18,18 +18,16 @@ export default {
   name: "AppPostActivity",
   components: { AppForm },
   props: {
-    moduleId: { required: true, type: String }
-    // activityId: { required: true, type: String }
+    moduleId: { required: true, type: String },
   },
-  // data: function() {},
   computed: {
     theModule() {
       let moduleId = this.moduleId;
-      let mod = store.find(item => {
+      let mod = store.find((item) => {
         return moduleId === item.id;
       });
       return mod;
-    }
+    },
   },
   methods: {
     processForm() {
@@ -37,10 +35,10 @@ export default {
       this.$router.push({ name: "Home" });
     },
     formComplete(data) {
-      console.log("Received", { data });
+      console.log({ data });
       this.processForm();
-    }
-  }
+    },
+  },
 };
 </script>
 
