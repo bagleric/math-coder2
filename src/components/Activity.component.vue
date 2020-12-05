@@ -12,7 +12,7 @@
     </AppBlockly>
     <div class="view" id="code">
       <h2>View</h2>
-      <button v-on:click="showCode()">Show JavaScript</button>
+      <button v-on:click="showCode()">Play</button>
       <button v-on:click="submitCode()">Done</button>
       <pre v-html="code"></pre>
     </div>
