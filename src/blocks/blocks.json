@@ -1,11 +1,44 @@
 {
+    "start_block": {
+        "type": "start_block",
+        "message0": "Start",
+        "nextStatement": null,
+        "colour": 165,
+        "tooltip": "The start block should go at the beginning of your code",
+        "helpUrl": ""
+    },
     "draw_shape_circle": {
         "type": "draw_shape_circle",
-        "message0": "Draw a circle",
+        "message0": "Draw Circle",
+        "inputsInline": false,
         "previousStatement": null,
         "nextStatement": null,
-        "colour": 0,
-        "tooltip": "Draw a cirlce",
+        "colour": 270,
+        "tooltip": "This block will draw one circle",
+        "helpUrl": ""
+    },
+    "repeat_block": {
+        "type": "repeat_block",
+        "message0": "repeat %1 times %2 %3",
+        "args0": [
+            {
+                "type": "field_number",
+                "name": "NAME",
+                "value": 0
+            },
+            {
+                "type": "input_dummy"
+            },
+            {
+                "type": "input_statement",
+                "name": "NAME"
+            }
+        ],
+        "inputsInline": true,
+        "previousStatement": null,
+        "nextStatement": null,
+        "colour": 105,
+        "tooltip": "Use this block to draw a circle",
         "helpUrl": ""
     }
 }

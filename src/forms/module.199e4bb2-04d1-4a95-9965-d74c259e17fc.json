@@ -38,6 +38,16 @@
                 "description": "Learn about the start block",
                 "blocks": [
                     {
+                        "type": "start_block",
+                        "id": "TODO: ID",
+                        "limit": 0
+                    },
+                    {
+                        "type": "repeat_block",
+                        "id": "TODO: ID",
+                        "limit": 0
+                    },
+                    {
                         "type": "draw_shape_circle",
                         "id": "TODO: ID",
                         "limit": 0
