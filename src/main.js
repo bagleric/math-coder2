@@ -18,6 +18,14 @@ Vue.config.ignoredElements = [
   "sep"
 ];
 
+import Define from "@/components/Define.component.vue";
+
+import VueSanitize from "vue-sanitize";
+
+Vue.use(VueSanitize);
+
+Vue.component("Define", Define);
+
 new Vue({
   router,
   vuetify,
