@@ -1,8 +1,10 @@
 <template>
   <div class="activity-view">
     <!-- <h2>{{ c_activity.name }}</h2> -->
-    <header class="blocks-header">Blocks</header>
-    <header class="prompt primary white--text">{{ c_activity.prompt }}</header>
+    <!-- <header class="blocks-header">Blocks</header> -->
+    <header class="prompt primary white--text">
+      <AppRenderHtml :html="c_activity.prompt"></AppRenderHtml>
+    </header>
     <AppBlockly class="app-blockly" ref="activityBlockly">
       <block
         v-for="theBlock in c_activity.blocks"
@@ -22,12 +24,14 @@
 <script>
 import store from "@/forms/module.199e4bb2-04d1-4a95-9965-d74c259e17fc.json";
 import AppBlockly from "@/components/Blockly.component.vue";
+import AppRenderHtml from "@/components/RenderHtml.component.vue";
 import BlocklyJS from "blockly/javascript";
 import "@/blocks/block1.js";
 export default {
   name: "AppActivity",
   components: {
     AppBlockly,
+    AppRenderHtml,
   },
   props: {
     moduleId: { type: String, required: true },
@@ -70,8 +74,8 @@ export default {
   height: 100%;
   display: grid;
   grid-template:
-    " blocksHeader prompt     prompt" 3em
-    " appBlockly   appBlockly view  " 1fr / 140px 2fr 2fr;
+    "prompt     prompt" auto
+    "appBlockly view  " 1fr / 2fr 2fr;
 }
 
 .blocks-header {
@@ -87,6 +91,8 @@ export default {
   display: grid;
   align-content: center;
   padding: 1em;
+  font-weight: bolder;
+  /* font-size: larger; */
 }
 .app-blockly {
   border: solid 1px grey;

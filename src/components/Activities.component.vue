@@ -7,7 +7,7 @@
     <AppActivity
       v-else-if="c_iter < activities.length"
       :moduleId="moduleId"
-      :activityNum="c_iter"
+      :activityNum="c_iter - 1"
       @activity-complete="completeActivity"
     ></AppActivity>
     <span v-else>
