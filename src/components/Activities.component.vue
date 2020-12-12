@@ -1,13 +1,13 @@
 <template>
   <div class="activities">
-    <span v-if="!c_iter || c_iter === 0">
+    <span v-if="!c_iter || c_iter < 0">
       <h1>Welcome</h1>
       <v-btn @click="incrementIter()">Start Activity</v-btn>
     </span>
     <AppActivity
       v-else-if="c_iter < activities.length"
       :moduleId="moduleId"
-      :activityNum="c_iter - 1"
+      :activityNum="c_iter"
       @activity-complete="completeActivity"
     ></AppActivity>
     <span v-else>
@@ -29,7 +29,7 @@ export default {
   components: { AppActivity },
   props: {
     moduleId: { required: true, type: String },
-    activityNum: { required: false, type: Number, default: 0 },
+    activityNum: { required: false, type: Number, default: -1 },
   },
   data: () => ({
     iter: 0,
@@ -58,7 +58,7 @@ export default {
       this.iter++;
     },
     decrementIter() {
-      if (this.iter > 1) this.iter--;
+      if (this.iter > 0) this.iter--;
     },
   },
 };

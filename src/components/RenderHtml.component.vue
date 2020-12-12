@@ -13,7 +13,7 @@ export default {
   },
   render(createRender) {
     const clean = this.$sanitize(this.html, {
-      allowedTags: defaults.allowedTags.concat(["define"]),
+      allowedTags: defaults.allowedTags.concat(["define", "img"]),
       allowedAttributes: {
         ...defaults.allowedAttributes,
         define: ["word"],
