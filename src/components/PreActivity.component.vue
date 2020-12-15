@@ -1,10 +1,9 @@
 <template>
   <div class="pre-activity">
-    <h2>Pre-Activity</h2>
     <AppForm
       :inputs="theModule.preModule.inputs"
       :results="theModule.preModule.results"
-      :multiple="true"
+      :stepper="true"
       @form-complete="formComplete"
     ></AppForm>
   </div>
@@ -53,5 +52,7 @@ export default {
 .pre-activity {
   height: 100%;
   padding: 2em;
+  max-width: 40em;
+  margin: 0 auto;
 }
 </style>

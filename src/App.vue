@@ -4,7 +4,7 @@
       <AppNavigation class="navigation"></AppNavigation>
     </v-app-bar>
     <v-main>
-      <router-view clas="view" />
+      <router-view />
     </v-main>
   </v-app>
 </template>

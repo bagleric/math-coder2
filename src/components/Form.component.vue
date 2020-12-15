@@ -3,26 +3,30 @@
 <AppForm :inputs="" :results=""></AppForm>
   -->
   <div class="app-form">
-    <FormulateForm
-      v-if="!multiple"
-      @submit="submitHandler"
-      @input="formUpdated"
-      :schema="inputs"
-      v-model="formValues"
-    />
-    <div v-else>
-      <FormulateForm v-model="formValues">
-        <FormulateInput
-          v-for="item in inputs"
-          :key="item.name"
-          v-bind="item"
-          v-show="inputs[iter - 1].name == item.name"
-        />
+    <div class="form-container" v-if="!stepper">
+      <FormulateForm
+        @submit="submitHandler"
+        @input="formUpdated"
+        :schema="inputs"
+        v-model="formValues"
+      />
+    </div>
+    <div v-else class="form-container">
+      <FormulateForm
+        v-model="formValues"
+        v-for="item in c_inputsAsArrays"
+        :key="item[0].name"
+        v-bind="item"
+        :schema="item"
+        v-show="c_inputsAsArrays[iter - 1][0].name == item[0].name"
+      >
       </FormulateForm>
+    </div>
+    <span class="controls">
       <v-btn v-show="iter > 1" @click="decrementIter">Previous</v-btn>
       <v-btn v-if="iter < inputs.length" @click="incrementIter">Next</v-btn>
       <v-btn v-else @click="submitForm">Submit</v-btn>
-    </div>
+    </span>
   </div>
 </template>
 
@@ -32,7 +36,7 @@ export default {
   props: {
     inputs: Array, //array of form inputs
     results: Object, // object with the results
-    multiple: {
+    stepper: {
       type: Boolean,
       default: false,
     },
@@ -43,8 +47,6 @@ export default {
       iter: 1,
     };
   },
-  computed: {},
-
   methods: {
     formUpdated(newValues) {
       this.$emit("form-updated", newValues);
@@ -63,10 +65,33 @@ export default {
       this.$emit("form-complete", this.formValues);
     },
   },
+  computed: {
+    c_inputsAsArrays() {
+      let newInputs = [];
+      for (var i = 0; i < this.inputs.length; i++) {
+        newInputs.push([this.inputs[i]]);
+      }
+      return newInputs;
+    },
+  },
 };
 </script>
 
 <style scoped>
+.form-container {
+  /* display: grid; */
+  /* overflow: auto; */
+  height: 100%;
+}
 .app-form {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.controls {
+  justify-content: flex-end;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1em;
 }
 </style>

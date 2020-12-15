@@ -1,5 +1,5 @@
 <template>
-  <div class="pre-activity">
+  <div class="pre-activity-view">
     <AppPreActivity :moduleId="moduleId"></AppPreActivity>
   </div>
 </template>
@@ -12,21 +12,20 @@ import AppPreActivity from "@/components/PreActivity.component.vue";
 
 export default {
   name: "PreActivity",
-  data: function() {
+  data: function () {
     return {
-      store
+      store,
     };
   },
   props: {
-    moduleId: { required: true, type: String }
+    moduleId: { required: true, type: String },
   },
-  components: { AppPreActivity }
+  components: { AppPreActivity },
 };
 </script>
 
 <style scoped>
-.pre-activity {
+.pre-activity-view {
   height: 100%;
-  padding: 2em;
 }
 </style>
