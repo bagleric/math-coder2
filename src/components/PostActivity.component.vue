@@ -3,12 +3,11 @@
     <AppForm
       :inputs="theModule.postModule.inputs"
       :results="theModule.postModule.results"
-      :multiple="true"
+      :stepper="true"
       @form-complete="formComplete"
     ></AppForm>
   </div>
 </template>
-
 
 <script>
 import store from "@/forms/module.199e4bb2-04d1-4a95-9965-d74c259e17fc.json";
@@ -46,5 +45,7 @@ export default {
 .post-activity {
   height: 100%;
   padding: 2em;
+  max-width: 40em;
+  margin: 0 auto;
 }
 </style>

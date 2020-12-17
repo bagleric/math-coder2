@@ -9,7 +9,6 @@
   </div>
 </template>
 
-
 <script>
 import store from "@/forms/module.199e4bb2-04d1-4a95-9965-d74c259e17fc.json";
 import AppForm from "@/components/Form.component.vue";

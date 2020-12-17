@@ -203,12 +203,8 @@
                             "children": "Peter, Alli, and Fred have 5 coins each."
                         },
                         {
-                            "name": "c8ce439d-feef-4633-a4e0-88457f3e347d",
-                            "component": "span",
-                            "children": "How many coins do they have in all?"
-                        },
-                        {
                             "name": "c0f77e1b-c1ea-4720-8803-eb0c692975e0",
+                            "label": "How many coins do they have in all?",
                             "type": "number"
                         }
                     ]
@@ -220,20 +216,11 @@
                         {
                             "name": "737a0b6a-9e91-488b-917a-33baf2b023e9",
                             "component": "div",
-                            "children": "A toy car costs $3"
-                        },
-                        {
-                            "name": "58b5b289-c99f-4d9e-9d77-99a1831db6ac",
-                            "component": "span",
-                            "children": "A toy truck costs $4"
-                        },
-                        {
-                            "name": "57eeb32b-0862-4798-b5f2-c02f5a818322",
-                            "component": "span",
-                            "children": "What costs more - 4 cars or 3 trucks?"
+                            "children": "A toy car costs $3. A toy truck costs $4"
                         },
                         {
                             "name": "b8c54d4f-cc63-472d-82c4-25677ab438b3",
+                            "label": "What costs more - 4 cars or 3 trucks?",
                             "type": "select",
                             "placeholder": "Pick one...",
                             "options": {
@@ -250,12 +237,7 @@
                         {
                             "name": "0145eb60-392c-42e2-90c2-9227a826733a",
                             "component": "div",
-                            "children": "Tyler, Aaron, and Jackie have bikes."
-                        },
-                        {
-                            "name": "eed151b4-5a94-4efb-9831-cd7b46d66663",
-                            "component": "span",
-                            "children": "Each bike has 2 wheels."
+                            "children": "Tyler, Aaron, and Jackie have bikes. Each bike has 2 wheels."
                         },
                         {
                             "name": "ca2ec547-dd23-4035-9bd6-8225830e61c3",
@@ -311,12 +293,8 @@
                             "children": "Write the time for the activity. Use A.M. or P.M"
                         },
                         {
-                            "name": "60d2ea9a-fdd9-4761-9a31-0ed216a00bef",
-                            "component": "div",
-                            "children": "Quarter after 9:00 in the morning."
-                        },
-                        {
                             "name": "62d5e156-bb5d-4317-ac52-e456ea8f8c03",
+                            "label": "Quarter after 9:00 in the morning.",
                             "type": "select",
                             "placeholder": "Pick one...",
                             "options": {
@@ -338,7 +316,7 @@
                         {
                             "name": "735846de-d9eb-49ba-b852-ee3c54f409e7",
                             "component": "img",
-                            "src": "https://vectr.com/bagleric/b2zYQQZaCG.svg?width=153.57&height=104.76&select=aeDnEcaAO,dtqGRzgoA,a5JHUgkIFH&source=selection"
+                            "src": "https://vectr.com/bagleric/b2zYQQZaCG.svg?width=150&height=102.33&select=aeDnEcaAO,dtqGRzgoA,a5JHUgkIFH&source=selection"
                         },
                         {
                             "name": "a75530b9-002a-4ab1-8c0a-2a29cb22c52c",
@@ -358,7 +336,7 @@
                         {
                             "name": "eaf3904a-2f29-47fa-bafa-91498f4c7b56",
                             "component": "img",
-                            "src": "https://vectr.com/bagleric/guFoCZpw2.svg?width=230.12&height=230.12&select=a9yE8WMmJG&source=selection"
+                            "src": "https://vectr.com/bagleric/guFoCZpw2.svg?width=150&height=150&select=a9yE8WMmJG&source=selection"
                         },
                         {
                             "name": "5d599866-8f2e-4b92-9956-3dd6f5fa8875",
@@ -596,36 +574,352 @@
         "postModule": {
             "inputs": [
                 {
-                    "id": "f341062b-1f12-4ef1-aeb0-64b1134bdebe",
-                    "label": "How do you feel about repeated addition?",
-                    "name": "f341062b-1f12-4ef1-aeb0-64b1134bdebe",
-                    "options": {
-                        "sad": "Not very good",
-                        "neutral": "Okay",
-                        "happy": "Great"
-                    },
-                    "type": "select"
+                    "name": "6c618586-0450-4eef-947d-c5fb1643374e",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "43894292-3b03-411d-885a-88e6657e56c2",
+                            "component": "div",
+                            "children": "There are an even number of grapes and an odd number of carrots on a plate."
+                        },
+                        {
+                            "label": "How many grapes and carrots could there be on the plate?",
+                            "name": "2448b8ab-45db-4517-800c-2b2d3f3504b9",
+                            "type": "number"
+                        }
+                    ]
                 },
                 {
-                    "id": "0287366a-7b43-4540-a7d1-413b6798e53b",
-                    "label": "How hard was it to tell the computer to do our math?",
-                    "name": "0287366a-7b43-4540-a7d1-413b6798e53b",
-                    "options": {
-                        "sad": "Hard",
-                        "neutral": "Okay",
-                        "happy": "Easy"
-                    },
-                    "type": "select"
+                    "name": "b60c7e39-25e0-4a23-81a1-eda98680e1cc",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "414b4b61-4f81-48e7-a6df-09507af14b90",
+                            "component": "div",
+                            "children": "There are 3 cookies on each row in a tray. There are 12 cookies in all."
+                        },
+                        {
+                            "label": "How many rows are on the tray?",
+                            "name": "dc8034d0-0d7a-4411-a39f-d1e202e3dbc3",
+                            "type": "number"
+                        }
+                    ]
                 },
                 {
-                    "id": "99470828-6876-40bf-ac81-d6d544a6d34f",
-                    "label": "Did you learn anything new?",
-                    "name": "99470828-6876-40bf-ac81-d6d544a6d34f",
-                    "options": {
-                        "yes": "Thumbs-up",
-                        "no": "Thumbs-down"
-                    },
-                    "type": "select"
+                    "name": "59c795c2-1a7a-4699-879e-6f567a0f82b3",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "cc0d4f9c-aa45-400d-9be5-afd5a4bfb816",
+                            "component": "div",
+                            "children": "There are 10 pies on the table. Each row has 5 pies."
+                        },
+                        {
+                            "label": "How many rows are on the table?",
+                            "name": "75e11a6e-61e3-4067-a222-970aaee9e0ee",
+                            "type": "number"
+                        }
+                    ]
+                },
+                {
+                    "name": "459401bd-f1f2-4b8a-9205-95aa0b971d3e",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "85b51437-9369-4ab0-8855-46eb8988fe67",
+                            "component": "div",
+                            "children": "There are 5 boxes of apples. Each box has 4 apples."
+                        },
+                        {
+                            "label": "How many apples are there?",
+                            "name": "7aa873fd-a48c-4bae-ab86-0a121af92531",
+                            "type": "number"
+                        }
+                    ]
+                },
+                {
+                    "name": "0d59d659-18b8-4bc1-aabc-ff04d5e88adf",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "02f96520-b963-474a-a443-64f5a9dd0e87",
+                            "component": "div",
+                            "children": "There are 2 shoes in each pair."
+                        },
+                        {
+                            "label": "If there are 10 shoes in all, how many pairs of shoes are there?",
+                            "name": "5cc0c44f-8b47-4072-94b6-69545730daac",
+                            "type": "number"
+                        }
+                    ]
+                },
+                {
+                    "name": "0a7c5309-4bab-43c5-896d-460dc143ef19",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "0787f097-f8df-4096-84c8-a03ccfd3d894",
+                            "component": "div",
+                            "children": "Find the sum. "
+                        },
+                        {
+                            "label": "7+4 = ?",
+                            "class": "multi-column align-center",
+                            "name": "0716a4d3-6ed4-4d17-98dd-853cee57bf91",
+                            "type": "number"
+                        }
+                    ]
+                },
+                {
+                    "id": "8a5e3656-9f21-4612-84eb-ae66b5ca9f42",
+                    "name": "15bb5272-2044-4bbe-b7f7-e24ddf98d7f9",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "cebee9bf-584a-41c4-9d4f-263e8b5eb13c",
+                            "component": "div",
+                            "children": "Caden has 2 dogs. Each dog has 4 toys. How many toys do the dogs have altogether?"
+                        },
+                        {
+                            "name": "1932ea21-33a0-49e9-a083-313f7e4b717b",
+                            "component": "div",
+                            "class": "multi-column align-center",
+                            "children": [
+                                {
+                                    "name": "540195ba-b59e-48bb-8894-4f97400f529b",
+                                    "type": "number",
+                                    "label": "dogs"
+                                },
+                                {
+                                    "name": "1fff0b4d-b1a3-4f06-aae5-99e835377b34",
+                                    "component": "div",
+                                    "children": " x "
+                                },
+                                {
+                                    "name": "3ce9716b-40cc-4c2b-8774-08109b7b5c4e",
+                                    "label": "toys",
+                                    "type": "number"
+                                },
+                                {
+                                    "name": "1880ebbd-24b3-4020-84ba-e00767926760",
+                                    "component": "div",
+                                    "children": "="
+                                },
+                                {
+                                    "name": "c4be8a71-f5ff-43d1-a982-fb377d8be4c8",
+                                    "type": "number"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "label": "Sue sleeps 8 hours each night. How many hours does she sleep in 3 nights?",
+                    "name": "3bb2218c-d77e-4c15-b6f8-6f2402fc4682",
+                    "type": "number"
+                },
+                {
+                    "name": "82d6f45a-473e-4d8a-a7f0-51bcfd3b736b",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "4bc91e5c-cc06-498f-a830-58db85ae77ec",
+                            "component": "div",
+                            "children": "Find the product."
+                        },
+                        {
+                            "name": "ec441d9f-2248-46e9-90c1-9e3e39f25bb6",
+                            "component": "div",
+                            "class": "multi-column align-center",
+                            "children": [
+                                {
+                                    "name": "c71414d5-335a-4bee-9e1d-93312982feea",
+                                    "component": "span",
+                                    "children": "4 x 2 = "
+                                },
+                                {
+                                    "name": "eb5e3fd0-7406-421c-bd27-0f519c543867",
+                                    "type": "number"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "359e31db-8da4-4c0a-a85c-3191dfde376c",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "e1441cf9-4bcd-46d0-96cd-7152aacf1f18",
+                            "component": "div",
+                            "children": "Sara, Jane, Greg, and Henry have 4 coins each."
+                        },
+                        {
+                            "name": "52a3076f-dfc9-498f-a0d8-8e33d6589ed1",
+                            "type": "number",
+                            "label": "How many coins do they have in all?"
+                        }
+                    ]
+                },
+                {
+                    "name": "6e75a426-88cd-4d9e-b425-cefeea5f1f1f",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "cd7ee99d-9327-4337-b85c-e7517d939a80",
+                            "component": "div",
+                            "children": "A toy boat costs $2. A toy plane costs $5."
+                        },
+                        {
+                            "label": "What costs more - 4 boats or 2 planes?",
+                            "name": "18e32a15-863c-4338-95d5-a9480510119f",
+                            "type": "select",
+                            "placeholder": "Pick one...",
+                            "options": {
+                                "boats": "4 boats",
+                                "planes": "2 planes"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "5cd59817-4f05-477e-846d-8f71ec72e6a7",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "5fd76404-86fb-4fdb-b466-2189554abef9",
+                            "component": "div",
+                            "children": "Arnold, Taylor, and Troy each have 3 pens."
+                        },
+                        {
+                            "name": "cb5fc375-8f3d-4bb4-a657-8fef026e488d",
+                            "type": "number",
+                            "label": "How many pens do they have together?"
+                        }
+                    ]
+                },
+                {
+                    "name": "0e00e6dc-0651-4a1a-980f-365fd7659215",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "9df0aba3-98ff-4667-8a5a-6c610cf8e617",
+                            "component": "div",
+                            "children": "Write the time for the activity. Use A.M. or P.M."
+                        },
+                        {
+                            "name": "23484e28-f228-41be-9f17-d92fc9071941",
+                            "component": "div",
+                            "children": "Close to bed-time"
+                        },
+                        {
+                            "name": "07ad103b-b606-4681-b272-e1f74bb736cd",
+                            "component": "div",
+                            "class": "multi-column align-center",
+                            "children": [
+                                {
+                                    "name": "c45a0321-0e8a-43b9-aaea-5d81713fbcdf",
+                                    "component": "strong",
+                                    "children": "8:00"
+                                },
+                                {
+                                    "name": "8ed01391-0fa6-4a72-85b1-2363efb0decb",
+                                    "type": "select",
+                                    "placeholder": "Pick one...",
+                                    "options": {
+                                        "am": "A.M.",
+                                        "pm": "P.M."
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "2c1db8e7-c646-4dd1-bd78-189d35d20338",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "ab5778ab-02e4-462d-8c91-09056d231053",
+                            "component": "div",
+                            "children": "Write the time. Use A.M. or P.M."
+                        },
+                        {
+                            "name": "7934b6c7-2cd1-4bf1-a6ee-702564e5502a",
+                            "label": "Quarter before 9:00 in the morning.",
+                            "type": "select",
+                            "placeholder": "Pick one...",
+                            "options": {
+                                "am": "A.M.",
+                                "pm": "P.M."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "86b29202-f8d6-47f3-87fd-079caa710863",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "cbc6d978-09a3-4945-a1aa-6c557b69de44",
+                            "component": "div",
+                            "children": "How many right angles are in this shape?"
+                        },
+                        {
+                            "name": "b2f0485b-02c7-400e-969f-e42f0964d7e3",
+                            "component": "img",
+                            "src": "https://vectr.com/bagleric/jpfNDTlde.svg?width=150&height=144.74&select=cpTaEfQiA,iumIvp1cS&source=selection"
+                        },
+                        {
+                            "name": "c288a289-38b8-469e-ac84-1d0df1ad44a1",
+                            "type": "number"
+                        }
+                    ]
+                },
+                {
+                    "name": "0dbf2d02-38a7-4408-b20f-8fdc3b119405",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "1e06f394-b5de-4eaf-9b55-da5312e69bb8",
+                            "component": "div",
+                            "children": "What name describes this shape?"
+                        },
+                        {
+                            "name": "a194aba2-1555-441a-ad5f-e996dec35081",
+                            "component": "img",
+                            "src": "https://vectr.com/bagleric/hcMmSr5s.svg?width=150&height=158.55&select=b3LoNg95M&source=selection"
+                        },
+                        {
+                            "name": "8f64f2af-7354-43d9-9539-fc86eb4fc81a",
+                            "type": "select",
+                            "placeholder": "Pick one...",
+                            "options": {
+                                "circle": "circle",
+                                "triangle": "triangle",
+                                "square": "square",
+                                "pentagon": "pentagon",
+                                "hexagon": "hexagon",
+                                "octagon": "octagon"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "7bbd26b0-4f4f-4a1b-80c7-296851ec9bb9",
+                    "component": "div",
+                    "children": [
+                        {
+                            "name": "0e9f9959-acd7-4077-943b-793b6b2fa946",
+                            "component": "div",
+                            "children": "Round to the nearest ten."
+                        },
+                        {
+                            "name": "d45013c6-b176-401c-a506-2147bba12c8d",
+                            "label": "53",
+                            "type": "number"
+                        }
+                    ]
                 }
             ],
             "results": {}
