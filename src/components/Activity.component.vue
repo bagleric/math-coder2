@@ -17,6 +17,10 @@
       <button v-on:click="showCode()">Play</button>
       <button v-on:click="submitCode()">Done</button>
       <pre v-html="code"></pre>
+      <AppReflection
+        v-if="activityComplete"
+        @reflection-complete="submitCode"
+      ></AppReflection>
     </div>
   </div>
 </template>
@@ -25,6 +29,7 @@
 import store from "@/forms/module.199e4bb2-04d1-4a95-9965-d74c259e17fc.json";
 import AppBlockly from "@/components/Blockly.component.vue";
 import AppRenderHtml from "@/components/RenderHtml.component.vue";
+import AppReflection from "@/components/Reflection.component.vue";
 import BlocklyJS from "blockly/javascript";
 import "@/blocks/block1.js";
 export default {
@@ -32,6 +37,7 @@ export default {
   components: {
     AppBlockly,
     AppRenderHtml,
+    AppReflection,
   },
   props: {
     moduleId: { type: String, required: true },
@@ -39,6 +45,7 @@ export default {
   },
   data: () => ({
     code: "",
+    activityComplete: true,
   }),
   computed: {
     c_activity() {
@@ -52,7 +59,7 @@ export default {
       ) {
         return theModule.activities[this.activityNum];
       }
-      throw `${this.activityNum} ${theModule.activities.length} Error, activity num is not valid`;
+      throw `${this.activityNum} ${theModule.activities.length}: Error, activity number is not valid`;
     },
   },
   methods: {
