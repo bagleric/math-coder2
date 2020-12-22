@@ -20,13 +20,13 @@
       <AppReflection
         v-if="activityComplete"
         @reflection-complete="submitCode"
+        :reflections="c_activity.reflections"
       ></AppReflection>
     </div>
   </div>
 </template>
 
 <script>
-import store from "@/forms/module.199e4bb2-04d1-4a95-9965-d74c259e17fc.json";
 import AppBlockly from "@/components/Blockly.component.vue";
 import AppRenderHtml from "@/components/RenderHtml.component.vue";
 import AppReflection from "@/components/Reflection.component.vue";
@@ -41,7 +41,11 @@ export default {
   },
   props: {
     moduleId: { type: String, required: true },
-    activityNum: { type: Number, required: true },
+    activity: {
+      type: Object,
+      //TODO add validation
+      required: true,
+    },
   },
   data: () => ({
     code: "",
@@ -49,17 +53,7 @@ export default {
   }),
   computed: {
     c_activity() {
-      let theModuleId = this.moduleId;
-      let theModule = store.find((item) => {
-        return item.id === theModuleId;
-      });
-      if (
-        this.activityNum >= 0 &&
-        theModule.activities.length > this.activityNum
-      ) {
-        return theModule.activities[this.activityNum];
-      }
-      throw `${this.activityNum} ${theModule.activities.length}: Error, activity number is not valid`;
+      return this.activity;
     },
   },
   methods: {
@@ -70,6 +64,7 @@ export default {
     },
     submitCode() {
       // TODO submit code
+      console.log("TODO: submit code to database");
       this.$emit("activity-complete", this.code);
     },
   },

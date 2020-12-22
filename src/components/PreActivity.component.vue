@@ -32,10 +32,10 @@ export default {
     processForm() {
       //TODO: submit this information to the database.
       this.$router.push({
-        name: "Activities",
+        name: "Activity",
         params: {
           moduleId: this.moduleId,
-          activityNum: 1,
+          activityNum: 0,
         },
       });
     },

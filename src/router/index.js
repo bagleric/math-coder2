@@ -45,25 +45,25 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "module/pre-activity" */ "../views/PreActivity.view.vue")
   },
-  {
-    name: "Activities",
-    path: "/modules/:moduleId/activities",
-    props: (route) => {
-      let activityNum = Number.parseInt(route.params.activityNum, 10)
-      if (Number.isNaN(activityNum)) {
-        activityNum = 0;
-      }
-      return {
-        moduleId: route.params.moduleId,
-        activityNum
-      };
-    },
-    component: () =>
-      import(/* webpackChunkName: "module/activities" */ "../views/Activities.view.vue")
-  },
+  // {
+  //   name: "Activities",
+  //   path: "/modules/:moduleId/activities",
+  //   props: (route) => {
+  //     let activityNum = Number.parseInt(route.params.activityNum, 10)
+  //     if (Number.isNaN(activityNum)) {
+  //       activityNum = 0;
+  //     }
+  //     return {
+  //       moduleId: route.params.moduleId,
+  //       activityNum
+  //     };
+  //   },
+  //   component: () =>
+  //     import(/* webpackChunkName: "module/activities" */ "../views/Activities.view.vue")
+  // },
   {
     name: "Activity",
-    path: "/modules/:moduleId/activities/:activityNum",
+    path: "/modules/:moduleId/activity/:activityNum",
     props: (route) => {
       let activityNum = Number.parseInt(route.params.activityNum, 10)
       // if (Number.isNaN(activityNum)) {

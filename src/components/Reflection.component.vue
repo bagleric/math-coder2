@@ -6,7 +6,7 @@
     <span class="reflection">{{ c_reflection }}</span>
     <div>
       <v-btn v-if="iter != 0" @click="decrementIter()">Previous</v-btn>
-      <v-btn v-if="iter < this.reflections.length" @click="incrementIter()"
+      <v-btn v-if="iter + 1 < this.reflections.length" @click="incrementIter()"
         >Next</v-btn
       >
       <v-btn v-else @click="incrementIter()">Done</v-btn>
@@ -41,12 +41,12 @@ export default {
   }),
   methods: {
     incrementIter() {
-      if (this.iter > this.reflections.length) {
-        console.log("emitting");
+      this.iter++;
+      if (this.reflections.length < this.iter + 1) {
+        console.log("Reflection Complete");
         this.$emit("reflection-complete");
         return;
       }
-      this.iter++;
       // = (this.iter + 1) % this.reflections.length;
     },
     decrementIter() {
