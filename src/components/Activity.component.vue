@@ -17,6 +17,8 @@
       <button v-on:click="showCode()">Play</button>
       <button v-on:click="submitCode()">Done</button>
       <pre v-html="code"></pre>
+    </div>
+    <div class="reflection">
       <AppReflection
         v-if="activityComplete"
         @reflection-complete="submitCode"
@@ -76,8 +78,9 @@ export default {
   height: 100%;
   display: grid;
   grid-template:
-    "prompt     prompt" auto
-    "appBlockly view  " 1fr / 2fr 2fr;
+    "prompt     prompt    " auto
+    "appBlockly view      " 1fr
+    "appBlockly reflection" auto/ 2fr 2fr;
 }
 
 .blocks-header {

@@ -2,23 +2,32 @@
   <!-- usage
 <AppReflection :title="" :message=""></AppReflection>
   -->
-  <div>
-    <span class="reflection">{{ c_reflection }}</span>
-    <div>
-      <v-btn v-if="iter != 0" @click="decrementIter()">Previous</v-btn>
-      <v-btn v-if="iter + 1 < this.reflections.length" @click="incrementIter()"
-        >Next</v-btn
-      >
-      <v-btn v-else @click="incrementIter()">Done</v-btn>
+  <div class="reflection">
+    <div class="message">
+      <AppRenderHtml :html="c_reflection"></AppRenderHtml>
+    </div>
+    <div class="controls">
+      <v-btn class="previous" text v-show="iter != 0" @click="decrementIter()">
+        <v-icon>mdi-chevron-left</v-icon>
+        Previous
+      </v-btn>
+      <v-btn text class="next" @click="incrementIter()">
+        <span v-if="iter + 1 < reflections.length">Next</span>
+        <span v-else>Done</span>
+        <v-icon>mdi-chevron-right</v-icon>
+      </v-btn>
     </div>
   </div>
 </template>
 
 <script>
+import AppRenderHtml from "@/components/RenderHtml.component.vue";
+
 const sample = require("lodash/sample");
 const isArray = require("lodash/isArray");
 export default {
   name: "AppReflection",
+  components: { AppRenderHtml },
   props: {
     reflections: {
       default: function() {
@@ -47,7 +56,6 @@ export default {
         this.$emit("reflection-complete");
         return;
       }
-      // = (this.iter + 1) % this.reflections.length;
     },
     decrementIter() {
       if (this.iter > 0) this.iter--;
@@ -61,7 +69,29 @@ export default {
   font-weight: bold;
 }
 
-.reflection {
+.message {
   padding: 1em;
+  grid-area: message;
+}
+
+.controls {
+  display: grid;
+  grid-area: controls;
+  grid-auto-flow: column;
+  justify-content: end;
+}
+
+.previous,
+.next {
+  color: white;
+}
+
+.reflection {
+  display: grid;
+  grid-template:
+    "message" 1fr
+    "controls" auto / auto;
+  background: darkgreen;
+  color: white;
 }
 </style>
