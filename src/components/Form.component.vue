@@ -7,7 +7,7 @@
       <FormulateForm
         @submit="submitHandler"
         @input="formUpdated"
-        :schema="inputs"
+        :schema="c_inputs"
         v-model="formValues"
       />
     </div>
@@ -24,19 +24,25 @@
     </div>
     <span class="controls">
       <v-btn v-show="iter > 1" @click="decrementIter">Previous</v-btn>
-      <v-btn v-if="iter < inputs.length" @click="incrementIter">Next</v-btn>
+      <v-btn v-if="iter < c_inputs.length" @click="incrementIter">Next</v-btn>
       <v-btn v-else @click="submitForm">Submit</v-btn>
     </span>
   </div>
 </template>
 
 <script>
+const shuffle = require("lodash/shuffle");
+
 export default {
   name: "AppForm",
   props: {
     inputs: Array, //array of form inputs
     results: Object, // object with the results
     stepper: {
+      type: Boolean,
+      default: false,
+    },
+    shuffle: {
       type: Boolean,
       default: false,
     },
@@ -66,10 +72,14 @@ export default {
     },
   },
   computed: {
+    c_inputs() {
+      if (this.shuffle) return shuffle(this.inputs);
+      return this.inputs;
+    },
     c_inputsAsArrays() {
       let newInputs = [];
-      for (var i = 0; i < this.inputs.length; i++) {
-        newInputs.push([this.inputs[i]]);
+      for (var i = 0; i < this.c_inputs.length; i++) {
+        newInputs.push([this.c_inputs[i]]);
       }
       return newInputs;
     },

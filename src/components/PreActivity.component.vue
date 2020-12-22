@@ -4,6 +4,7 @@
       :inputs="theModule.preModule.inputs"
       :results="theModule.preModule.results"
       :stepper="true"
+      :shuffle="true"
       @form-complete="formComplete"
     ></AppForm>
   </div>
