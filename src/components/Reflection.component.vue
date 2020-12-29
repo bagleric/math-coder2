@@ -52,7 +52,6 @@ export default {
     incrementIter() {
       this.iter++;
       if (this.reflections.length < this.iter + 1) {
-        console.log("Reflection Complete");
         this.$emit("reflection-complete");
         return;
       }

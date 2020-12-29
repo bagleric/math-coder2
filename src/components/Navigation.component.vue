@@ -3,18 +3,27 @@
     <app-logo></app-logo>
     <!-- TODO: Uncomment as needed -->
     <!-- <v-btn :to="{ name: 'Activity' }">Activity</v-btn> -->
+    {{ c_location }}
   </div>
 </template>
 
 <script>
 import AppLogo from "@/components/Logo.component.vue";
+const get = require("lodash/get");
 // import { Component, Vue } from "vue-property-decorator";
 // import {} from "@/components/AppLogo";
 export default {
   name: "AppNavigation",
   components: {
-    AppLogo
-  }
+    AppLogo,
+  },
+  computed: {
+    c_location() {
+      const routeName = get(this.$route, ["matched", 0, "name"], "");
+      const breadcrumb = get(this.$route, ["meta", "breadcrumb"], routeName);
+      return breadcrumb;
+    },
+  },
 };
 </script>
 

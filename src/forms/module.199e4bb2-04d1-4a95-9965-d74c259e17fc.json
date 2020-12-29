@@ -121,7 +121,7 @@
                         {
                             "name": "84b0e12b-a94d-425d-a14f-7ade8441b0c0",
                             "component": "div",
-                            "children": "Rachael has 5 cars. Each car has 4 wheels."
+                            "children": "Ty has 5 cars. Each car has 4 wheels."
                         },
                         {
                             "name": "a17f9169-7294-49c4-9c61-710160650756",
@@ -225,7 +225,8 @@
                             "placeholder": "Pick one...",
                             "options": {
                                 "cars": "4 Cars",
-                                "trucks": "3 Trucks"
+                                "trucks": "3 Trucks",
+                                "same": "The cost the same"
                             }
                         }
                     ]
@@ -242,7 +243,7 @@
                         {
                             "name": "ca2ec547-dd23-4035-9bd6-8225830e61c3",
                             "type": "number",
-                            "label": "How many wheels do their Bikes have together?"
+                            "label": "How many wheels do their Bikes have all together?"
                         }
                     ]
                 },
@@ -331,7 +332,7 @@
                         {
                             "name": "fdcaa9fb-4692-4320-a5cf-2e638351e8a0",
                             "component": "div",
-                            "children": "What name describes this shape?"
+                            "children": "What is the name of this shape?"
                         },
                         {
                             "name": "eaf3904a-2f29-47fa-bafa-91498f4c7b56",
@@ -376,28 +377,20 @@
             {
                 "id": "d2280c13-d2cc-456c-b40a-014830b52616",
                 "name": "Starting off",
-                "description": "This activity introduces students to the basic pieces of the UI: Blocks, the canvas, and the view.",
+                "description": "This activity introduces students to the basic pieces of the UI: Blocks, the page, and the view.",
                 "blocks": [
                     {
                         "type": "start_block",
                         "limit": 1
-                    },
-                    {
-                        "kind": "block",
-                        "type": "controls_if"
-                    },
-                    {
-                        "kind": "block",
-                        "type": "controls_whileUntil"
                     }
                 ],
                 "reflections": [
                     "When we have used all the blocks they change color.",
-                    "You have learned how to drag the blocks onto the canvas.",
+                    "You have learned how to drag the blocks onto the page.",
                     "You ran the code.",
                     "Well done!"
                 ],
-                "prompt": "Drag a <define word='start_block'>start block</define> onto the canvas. Press the <define word='play_button'>play button</define>"
+                "prompt": "Drag a <define word='start_block'>start block</define> onto the page. Press the <define word='play_button'>play button</define>"
             },
             {
                 "id": "b572bba0-3eec-475e-aadd-a42d99e96268",
@@ -411,13 +404,9 @@
                     {
                         "type": "draw_shape_circle",
                         "limit": 1
-                    },
-                    {
-                        "kind": "block",
-                        "type": "controls_repeat_ext"
                     }
                 ],
-                "prompt": "Drag a <define word='start_block'>start block</define> and a <define word='circle_block'>circle block</define> onto the canvas and <define word='connect_block'>connect</define> them. Press the <define word='play_button'>play button</define>.",
+                "prompt": "Drag a <define word='start_block'>start block</define> and a <define word='circle_block'>circle block</define> onto the page and <define word='connect_block'>connect</define> them. Press the <define word='play_button'>play button</define>.",
                 "reflections": [
                     "By <define word='connect_block'>connecting</define> the two blocks you told the computer to draw a circle. You have written code!"
                 ]
@@ -438,8 +427,7 @@
                 ],
                 "prompt": "Tell the computer to draw 5 circles by <define word='connect_block'>connecting</define> 5 <define word='circle_block'>circle blocks</define> to the <define word='start_block'>start block</define>.",
                 "reflections": [
-                    "We are telling our computer to add. In this case, our math sentence looks like this:",
-                    "1 circle + 1 circle + 1 circle + 1 circle + 1 circle = 5 circles"
+                    "We are telling our computer to add. In this case, our math sentence looks like this: <strong>1 circle + 1 circle + 1 circle + 1 circle + 1 circle = 5 circles</strong>"
                 ]
             },
             {
@@ -503,12 +491,12 @@
                         "limit": 2
                     }
                 ],
-                "prompt": "Tell the computer to draw 5 groups of 5 circles.  To do this, place one of the <define word='repeat_block'>repeat blocks</define> inside another <define word='repeat_block'>repeat block</define>. Then place a <define word='circle_block'>circle block</define> into the second <define word='repeat_block'>repeat block</define>. ",
+                "prompt": "Tell the computer to draw 5 groups of 5 circles.  <ol><li>To do this, place one of the <define word='repeat_block'>repeat blocks</define> inside another <define word='repeat_block'>repeat block</define>.</li><li> Then place a <define word='circle_block'>circle block</define> into the second <define word='repeat_block'>repeat block</define>. </li></ol>",
                 "reflections": [
                     "We have just taught our computer to do <define word='repeated_addition'>repeated addition</define>.",
-                    "We have several rows with the same number of circles in each row.",
+                    "We have 5 rows with 5 circles in each row. Each row has the same number of items",
                     "Repeated addition is also called <define word='multiplication'>multiplication</define>.",
-                    "<define word='multiplication'>Multiplication</define>is where we take groups of equal sizes and add all of their items together."
+                    "<define word='multiplication'>Multiplication</define> is where we take groups of equal sizes and add all of their items together."
                 ]
             },
             {
@@ -531,6 +519,7 @@
                 ],
                 "prompt": "Now, let’s <define word='multiplication'>multiply</define>. Place one <define word='repeat_block'>repeat block</define> inside the other one. Then place the <define word='circle_block'>circle block</define> inside the second <define word='repeat_block'>repeat block</define>. Change the <define word='repeat_block'>repeat block</define> numbers to 3 and 4.",
                 "reflections": [
+                    "There are 3 rows with 4 circles in each row. ",
                     "By counting the circles we know that there are 12 circles total."
                 ]
             },
@@ -554,8 +543,8 @@
                 ],
                 "prompt": "Doing the same thing as before, tell the computer to <define word='multiplication'>multiply</define> by making it repeat 4 circles 3 times.",
                 "reflections": [
+                    "3 rows of 4 circles make the same number of circles as 4 rows of 3 circles.",
                     "By counting all the circles we know that there are 12 circles again. That was the same as last time.",
-                    "3 groups of 4 make the same number as 4 groups of 3.",
                     "In math we say it like this: 3 times 4 equals 12, and we write it like this: 3 x 4 = 12.",
                     "This means that we have 3 groups of 4 items and 12 items in total.",
                     "If we had 5 groups of 3 items, we would write it like this: 5 x 3.",
@@ -789,7 +778,8 @@
                             "placeholder": "Pick one...",
                             "options": {
                                 "boats": "4 boats",
-                                "planes": "2 planes"
+                                "planes": "2 planes",
+                                "same": "They cost the same."
                             }
                         }
                     ]
@@ -895,7 +885,7 @@
                         {
                             "name": "1e06f394-b5de-4eaf-9b55-da5312e69bb8",
                             "component": "div",
-                            "children": "What name describes this shape?"
+                            "children": "What is the name of this shape?"
                         },
                         {
                             "name": "a194aba2-1555-441a-ad5f-e996dec35081",
@@ -951,7 +941,7 @@
             },
             "repeat_block": {
                 "name": "Repeat Block",
-                "definition-html": "This block is made up of two parts. <ol><li><strong>Number Input:<strong> this tells us how many times we should run the code inside the code slot<li><li><strong>Code Slot:</strong> The area we can put other code blocks.</li></ol> This block allows us to do one thing many times"
+                "definition-html": "This block is made up of two parts. <ol><li><strong>Number Input:</strong> this tells us how many times we should run the code inside the code slot</li><li><strong>Code Slot:</strong> The area we can put other code blocks.</li></ol> This block allows us to do one thing many times"
             },
             "multiplication": {
                 "name": "Multiplication, Multiply",

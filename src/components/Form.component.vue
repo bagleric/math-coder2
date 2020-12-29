@@ -10,6 +10,9 @@
         :schema="c_inputs"
         v-model="formValues"
       />
+      <span class="controls">
+        <v-btn @click="submitForm">Submit</v-btn>
+      </span>
     </div>
     <div v-else class="form-container">
       <FormulateForm
@@ -21,12 +24,12 @@
         v-show="c_inputsAsArrays[iter - 1][0].name == item[0].name"
       >
       </FormulateForm>
+      <span class="controls">
+        <v-btn v-show="iter > 1" @click="decrementIter">Previous</v-btn>
+        <v-btn v-if="iter < c_inputs.length" @click="incrementIter">Next</v-btn>
+        <v-btn v-else @click="submitForm">Submit</v-btn>
+      </span>
     </div>
-    <span class="controls">
-      <v-btn v-show="iter > 1" @click="decrementIter">Previous</v-btn>
-      <v-btn v-if="iter < c_inputs.length" @click="incrementIter">Next</v-btn>
-      <v-btn v-else @click="submitForm">Submit</v-btn>
-    </span>
   </div>
 </template>
 
@@ -89,8 +92,6 @@ export default {
 
 <style scoped>
 .form-container {
-  /* display: grid; */
-  /* overflow: auto; */
   height: 100%;
 }
 .app-form {

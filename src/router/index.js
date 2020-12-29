@@ -11,30 +11,42 @@ const routes = [
   {
     path: "/",
     name: "Hello",
-    component: ViewHello
+    component: ViewHello,
+    meta: {
+      breadcrumb: ""
+    },
   },
   {
     path: "/home",
     name: "Home",
-    component: ViewHome
+    meta: {
+      breadcrumb: "Home"
+    }, component: ViewHome
   },
   {
     path: "/modules",
     name: "Modules",
-    component: () =>
+    meta: {
+      breadcrumb: "Modules"
+    }, component: () =>
       import(/* webpackChunkName: "modules" */ "../views/Modules.view.vue"),
   },
   {
     path: "/modules/:moduleId",
     name: "Module",
     props: true,
-    component: () =>
+    meta: {
+      breadcrumb: "Module"
+    }, component: () =>
       import(/* webpackChunkName: "module" */ "../views/Module.view.vue"),
   },
   {
     name: "PostActivity",
     path: "/modules/:moduleId/post-activity",
     props: true,
+    meta: {
+      breadcrumb: "Post-test"
+    },
     component: () =>
       import(/* webpackChunkName: "module/post-activity" */ "../views/PostActivity.view.vue")
   },
@@ -42,6 +54,9 @@ const routes = [
     name: "PreActivity",
     path: "/modules/:moduleId/pre-activity",
     props: true,
+    meta: {
+      breadcrumb: "Pre-test"
+    },
     component: () =>
       import(/* webpackChunkName: "module/pre-activity" */ "../views/PreActivity.view.vue")
   },
@@ -74,7 +89,9 @@ const routes = [
         activityNum
       };
     },
-    component: () =>
+    meta: {
+      breadcrumb: "Activity"
+    }, component: () =>
       import(/* webpackChunkName: "module/activity" */ "../views/Activity.view.vue")
   },
   // {

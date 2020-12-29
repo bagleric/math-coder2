@@ -1,10 +1,18 @@
 <template>
   <div class="view-activity">
     <AppActivity
+      v-if="!c_activitiesComplete"
       :moduleId="moduleId"
       :activity="c_activity"
       @activity-complete="completeActivity"
     ></AppActivity>
+    <div class="complete-view" v-else>
+      <h1 class="title">Activities complete</h1>
+      <h2>Well done, you've completed all of the activities.</h2>
+      <v-btn :to="{ name: 'PostActivity', params: { moduleId } }"
+        >Continue</v-btn
+      >
+    </div>
   </div>
 </template>
 
@@ -22,6 +30,7 @@ export default {
   data: () => ({
     activity: {},
     module: {},
+    activitiesComplete: false,
   }),
   computed: {
     c_module() {
@@ -30,8 +39,10 @@ export default {
         return item.id === theModuleId;
       });
     },
+    c_activitiesComplete() {
+      return this.activitiesComplete;
+    },
     c_activity() {
-      console.log(this.c_module);
       if (
         this.activityNum >= 0 &&
         this.c_module.activities.length > this.activityNum
@@ -43,17 +54,12 @@ export default {
     },
   },
   beforeCreate() {
-    console.log(this.$route.params);
     let theModuleId = this.$route.params.moduleId;
     this.module = store.find((item) => {
       return item.id === theModuleId;
     });
-    console.log(this.module);
     if (this.module.activities.length <= this.$route.params.activityNum) {
-      this.$route.push({
-        name: "PostActivity",
-        moduleId: this.$route.moduleId,
-      });
+      this.activitiesComplete = true;
     }
   },
   methods: {
@@ -68,12 +74,7 @@ export default {
           },
         });
       } else {
-        this.$router.push({
-          name: "PostActivity",
-          params: {
-            moduleId: this.moduleId,
-          },
-        });
+        this.activitiesComplete = true;
       }
     },
   },
@@ -83,5 +84,11 @@ export default {
 <style scoped>
 .view-activity {
   height: 100%;
+}
+.complete-view {
+  display: grid;
+  place-items: center;
+  gap: 1em;
+  padding: 1em;
 }
 </style>
