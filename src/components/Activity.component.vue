@@ -5,25 +5,35 @@
     <header class="prompt primary white--text">
       <AppRenderHtml :html="c_activity.prompt"></AppRenderHtml>
     </header>
-    <AppBlockly class="app-blockly" ref="activityBlockly">
-      <block
-        v-for="theBlock in c_activity.blocks"
-        :key="theBlock.type"
-        :type="theBlock.type"
-      ></block>
-    </AppBlockly>
+    <div class="app-blockly">
+      <AppBlockly ref="activityBlockly">
+        <block
+          v-for="theBlock in c_activity.blocks"
+          :key="theBlock.type"
+          :type="theBlock.type"
+        ></block>
+      </AppBlockly>
+      <v-btn
+        tile
+        large
+        color="green"
+        class="white--text"
+        v-on:click="showCode()"
+        >Run</v-btn
+      >
+    </div>
     <div class="view" id="code">
-      <h2>View</h2>
-      <button v-on:click="showCode()">Play</button>
-      <button v-on:click="submitCode()">Done</button>
-      <pre v-html="code"></pre>
+      <AppRenderHtml class="rendered-code" :html="code"></AppRenderHtml>
     </div>
     <div class="reflection">
       <AppReflection
-        v-if="activityComplete"
+        v-if="c_codeIsValid"
         @reflection-complete="submitCode"
         :reflections="c_activity.reflections"
       ></AppReflection>
+      <span v-else-if="c_madeAttemtps" class="not-quite">
+        It looks like we didn't quite make it. Keep trying.
+      </span>
     </div>
   </div>
 </template>
@@ -51,18 +61,26 @@ export default {
   },
   data: () => ({
     code: "",
-    activityComplete: true,
+    attempts: false,
   }),
   computed: {
     c_activity() {
       return this.activity;
     },
+    c_codeIsValid() {
+      return this.c_activity.solution == this.code;
+    },
+    c_madeAttemtps() {
+      return this.attempts > 0;
+    },
   },
   methods: {
     showCode() {
+      this.attempts++;
       this.code = BlocklyJS.workspaceToCode(
         this.$refs["activityBlockly"].workspace
       );
+      console.log(this.code);
     },
     submitCode() {
       // TODO submit code
@@ -102,9 +120,22 @@ export default {
 .app-blockly {
   border: solid 1px grey;
   grid-area: appBlockly;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 .view {
   border: solid 1px grey;
   grid-area: view;
+}
+
+.view-header {
+  display: grid;
+}
+
+.not-quite {
+  display: grid;
+  background: grey;
+  color: white;
+  padding: 1em;
 }
 </style>

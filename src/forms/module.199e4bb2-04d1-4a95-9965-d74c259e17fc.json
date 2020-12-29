@@ -380,17 +380,18 @@
                 "description": "This activity introduces students to the basic pieces of the UI: Blocks, the page, and the view.",
                 "blocks": [
                     {
-                        "type": "start_block",
+                        "type": "draw_shape_circle",
                         "limit": 1
                     }
                 ],
                 "reflections": [
-                    "When we have used all the blocks they change color.",
+                    "Well done! You ran the code! This is the reflect box. It gives you tips and helps you know what you have learned. Click the <i>Next</i> button to learn more",
                     "You have learned how to drag the blocks onto the page.",
-                    "You ran the code.",
-                    "Well done!"
+                    "Look at the blocks. When you have dragged all of the blocks onto the page they change color.",
+                    "Click <i>Done</i> to go to the next activity."
                 ],
-                "prompt": "Drag a <define word='start_block'>start block</define> onto the page. Press the <define word='play_button'>play button</define>"
+                "prompt": "Drag a <define word='circle_block'>circle block</define> onto the page. Press the <define word='run_button'>run button</define>",
+                "solution": "<img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>"
             },
             {
                 "id": "b572bba0-3eec-475e-aadd-a42d99e96268",
@@ -398,15 +399,12 @@
                 "description": "This introduces the concept of connecting two blocks together.",
                 "blocks": [
                     {
-                        "type": "start_block",
-                        "limit": 1
-                    },
-                    {
                         "type": "draw_shape_circle",
-                        "limit": 1
+                        "limit": 2
                     }
                 ],
-                "prompt": "Drag a <define word='start_block'>start block</define> and a <define word='circle_block'>circle block</define> onto the page and <define word='connect_block'>connect</define> them. Press the <define word='play_button'>play button</define>.",
+                "prompt": "Drag two <define word='circle_block'>circle blocks</define> onto the page and <define word='connect_block'>connect</define> them together. Press the <define word='run_button'>run button</define>.",
+                "solution": "<img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/><img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>",
                 "reflections": [
                     "By <define word='connect_block'>connecting</define> the two blocks you told the computer to draw a circle. You have written code!"
                 ]
@@ -417,15 +415,12 @@
                 "description": "Learn about connecting multiple blocks together",
                 "blocks": [
                     {
-                        "type": "start_block",
-                        "limit": 1
-                    },
-                    {
                         "type": "draw_shape_circle",
                         "limit": 5
                     }
                 ],
-                "prompt": "Tell the computer to draw 5 circles by <define word='connect_block'>connecting</define> 5 <define word='circle_block'>circle blocks</define> to the <define word='start_block'>start block</define>.",
+                "prompt": "Tell the computer to draw 5 circles by <define word='connect_block'>connecting</define> 5 <define word='circle_block'>circle blocks</define> together",
+                "solution": "<img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/><img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/><img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/><img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/><img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>",
                 "reflections": [
                     "We are telling our computer to add. In this case, our math sentence looks like this: <strong>1 circle + 1 circle + 1 circle + 1 circle + 1 circle = 5 circles</strong>"
                 ]
@@ -436,10 +431,6 @@
                 "description": "Learn about the repeat block. In this activity you will observe the default behavior of the repeat block. You should expect it to repeat the action inside it the number of times found in the input.",
                 "blocks": [
                     {
-                        "type": "start_block",
-                        "limit": 1
-                    },
-                    {
                         "type": "draw_shape_circle",
                         "limit": 1
                     },
@@ -448,7 +439,8 @@
                         "limit": 1
                     }
                 ],
-                "prompt": "<define word='connect_block'>Connect</define> a <define word='repeat_block'>repeat block</define> to the <define word='start_block'>start block</define> and then place a <define word='circle_block'>circle block</define> inside of the <define word='repeat_block'>repeat block</define>.",
+                "prompt": "Drag a <define word='repeat_block'>repeat block</define>  onto the page and then then place a <define word='circle_block'>circle block</define> inside of the <define word='repeat_block'>repeat block</define>.",
+                "solution": "<div data-val='5'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>",
                 "reflections": [
                     "We just told the computer to do the same thing as last time. This time we only used three blocks."
                 ]
@@ -459,10 +451,6 @@
                 "description": "Learn how to adjust the repeat block.",
                 "blocks": [
                     {
-                        "type": "start_block",
-                        "limit": 1
-                    },
-                    {
                         "type": "draw_shape_circle",
                         "limit": 1
                     },
@@ -471,17 +459,14 @@
                         "limit": 1
                     }
                 ],
-                "prompt": "Tell the computer to draw 7 circles using the <define word='repeat_block'>repeat block</define> by changing the number 5 on the <define word='repeat_block'>repeat block</define> to 7"
+                "prompt": "Tell the computer to draw 7 circles using the <define word='repeat_block'>repeat block</define> by changing the number 5 on the <define word='repeat_block'>repeat block</define> to 7",
+                "solution": "<div data-val='7'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>"
             },
             {
                 "id": "ec2475cf-621b-426e-8168-86b042650724",
                 "name": "A lot of repeating",
                 "description": "Learn about placing one repeat block inside another one.",
                 "blocks": [
-                    {
-                        "type": "start_block",
-                        "limit": 1
-                    },
                     {
                         "type": "draw_shape_circle",
                         "limit": 1
@@ -492,6 +477,7 @@
                     }
                 ],
                 "prompt": "Tell the computer to draw 5 groups of 5 circles.  <ol><li>To do this, place one of the <define word='repeat_block'>repeat blocks</define> inside another <define word='repeat_block'>repeat block</define>.</li><li> Then place a <define word='circle_block'>circle block</define> into the second <define word='repeat_block'>repeat block</define>. </li></ol>",
+                "solution": "<div data-val='5'>  <div data-val='5'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>  <div data-val='5'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>  <div data-val='5'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>  <div data-val='5'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>  <div data-val='5'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div></div>",
                 "reflections": [
                     "We have just taught our computer to do <define word='repeated_addition'>repeated addition</define>.",
                     "We have 5 rows with 5 circles in each row. Each row has the same number of items",
@@ -505,10 +491,6 @@
                 "description": "Modify the defaults of the nested repeat blocks",
                 "blocks": [
                     {
-                        "type": "start_block",
-                        "limit": 1
-                    },
-                    {
                         "type": "draw_shape_circle",
                         "limit": 1
                     },
@@ -518,6 +500,7 @@
                     }
                 ],
                 "prompt": "Now, let’s <define word='multiplication'>multiply</define>. Place one <define word='repeat_block'>repeat block</define> inside the other one. Then place the <define word='circle_block'>circle block</define> inside the second <define word='repeat_block'>repeat block</define>. Change the <define word='repeat_block'>repeat block</define> numbers to 3 and 4.",
+                "solution": "<div data-val='3'>  <div data-val='4'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>  <div data-val='4'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>  <div data-val='4'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div></div>",
                 "reflections": [
                     "There are 3 rows with 4 circles in each row. ",
                     "By counting the circles we know that there are 12 circles total."
@@ -529,10 +512,6 @@
                 "description": "Explore multiplication again.",
                 "blocks": [
                     {
-                        "type": "start_block",
-                        "limit": 1
-                    },
-                    {
                         "type": "draw_shape_circle",
                         "limit": 1
                     },
@@ -542,6 +521,7 @@
                     }
                 ],
                 "prompt": "Doing the same thing as before, tell the computer to <define word='multiplication'>multiply</define> by making it repeat 4 circles 3 times.",
+                "solution": "<div data-val='4'>  <div data-val='3'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>  <div data-val='3'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>  <div data-val='3'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>  <div data-val='3'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div></div>",
                 "reflections": [
                     "3 rows of 4 circles make the same number of circles as 4 rows of 3 circles.",
                     "By counting all the circles we know that there are 12 circles again. That was the same as last time.",
@@ -557,10 +537,6 @@
                 "description": "Solve the multiplication problem",
                 "blocks": [
                     {
-                        "type": "start_block",
-                        "limit": 1
-                    },
-                    {
                         "type": "draw_shape_circle",
                         "limit": 1
                     },
@@ -569,7 +545,8 @@
                         "limit": 2
                     }
                 ],
-                "prompt": "Use <define word='coding'>coding</define>. Find the value of the missing number. 5 x 3 = ____."
+                "prompt": "Use <define word='coding'>coding</define>. Find the value of the missing number. 5 x 3 = ____.",
+                "solution": "<div data-val='5'>  <div data-val='3'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>  <div data-val='3'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>  <div data-val='3'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>  <div data-val='3'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div>  <div data-val='3'>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>  <img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/></div></div>"
             }
         ],
         "postModule": {
@@ -927,10 +904,6 @@
             "results": {}
         },
         "word-definitions": {
-            "start_block": {
-                "name": "Start Block",
-                "definition-html": "A code block that is placed at the beginning of each code activity."
-            },
             "circle_block": {
                 "name": "Circle Block",
                 "definition-html": "A code block that draws a circle"
@@ -951,8 +924,8 @@
                 "name": "Coding",
                 "definition-html": "Creating instructions for a computer to read. This is how we tell computers what to do."
             },
-            "play_button": {
-                "name": "Play Button, Play",
+            "run_button": {
+                "name": "Run Button, Run",
                 "definition-html": "The button that tells the computer to make our code do something."
             }
         }

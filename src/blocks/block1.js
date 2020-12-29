@@ -36,7 +36,7 @@ Blockly.JavaScript['repeat_block'] = function (block) {
     //     ${loopVar}++) {\n
     //     ${branch} }\n`;
 
-    code += "<div>"
+    code += `<div data-val='${endVar}'>`
     for (let i = 0; i < endVar; i++) {
         code += branch;
     }
@@ -51,9 +51,7 @@ Blockly.Blocks["draw_shape_circle"] = {
 };
 
 Blockly.JavaScript["draw_shape_circle"] = function () {
-    let images = require.context("../assets/", false, /\.png$/);
-    let url = images("./circle.png");
-    return "<img height='50' src=" + url + ">";
+    return `<img height='50' src='https://vectr.com/bagleric/csVnq516.svg?width=50&height=50&select=c2dL2hBbd&source=selection'/>`;
 };
 
 
@@ -66,16 +64,6 @@ Blockly.Blocks["repeat_block"] = {
 // Blockly.JavaScript["repeat_block"] = function (block) {
 //     console.log(block);
 //     console.log(block.inputList);
-//     return `<div>${block}</div>`;
+//     return `< div > ${ block }</div > `;
 // };
 
-
-Blockly.Blocks["start_block"] = {
-    init: function () {
-        this.jsonInit(theBlocks.start_block);
-    }
-};
-
-Blockly.JavaScript["start_block"] = function () {
-    return "<div>";
-};

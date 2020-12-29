@@ -1,4 +1,3 @@
-
 <script>
 import VueSanitize from "vue-sanitize";
 let defaults = VueSanitize.defaults;

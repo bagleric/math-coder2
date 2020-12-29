@@ -24,14 +24,6 @@
         "tooltip": "%{BKY_CONTROLS_REPEAT_TOOLTIP}",
         "helpUrl": "%{BKY_CONTROLS_REPEAT_HELPURL}"
     },
-    "start_block": {
-        "type": "start_block",
-        "message0": "Start",
-        "nextStatement": null,
-        "colour": 165,
-        "tooltip": "The start block should go at the beginning of your code",
-        "helpUrl": ""
-    },
     "draw_shape_circle": {
         "type": "draw_shape_circle",
         "message0": "Draw Circle",
