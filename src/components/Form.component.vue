@@ -11,7 +11,7 @@
         v-model="formValues"
       />
       <span class="controls">
-        <v-btn @click="submitForm">Submit</v-btn>
+        <v-btn outlined color="primary" @click="submitForm">Submit</v-btn>
       </span>
     </div>
     <div v-else class="form-container">
@@ -25,9 +25,19 @@
       >
       </FormulateForm>
       <span class="controls">
-        <v-btn v-show="iter > 1" @click="decrementIter">Previous</v-btn>
-        <v-btn v-if="iter < c_inputs.length" @click="incrementIter">Next</v-btn>
-        <v-btn v-else @click="submitForm">Submit</v-btn>
+        <v-btn text color="primary" v-show="iter > 1" @click="decrementIter"
+          >Previous</v-btn
+        >
+        <v-btn
+          outlined
+          color="primary"
+          v-if="iter < c_inputs.length"
+          @click="incrementIter"
+          >Next</v-btn
+        >
+        <v-btn outlined color="primary" v-else @click="submitForm"
+          >Submit</v-btn
+        >
       </span>
     </div>
   </div>

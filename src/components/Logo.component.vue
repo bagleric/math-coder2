@@ -1,5 +1,5 @@
 <template>
-  <v-btn text :to="{ name: 'Home' }" class="app-logo">
+  <v-btn text disabled :to="{ name: 'Home' }" class="app-logo">
     <span class="math-text">MATH-</span>
     <span class="code-text">coder</span>
     <v-icon color="primary"> mdi-home-outline </v-icon>
@@ -10,8 +10,8 @@
 import anime from "animejs/lib/anime.es.js";
 export default {
   name: "AppLogo",
-  mounted: function () {
-    this.$nextTick(function () {
+  mounted: function() {
+    this.$nextTick(function() {
       // Code that will run only after the
       // entire view has been rendered
       anime({

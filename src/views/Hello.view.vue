@@ -6,7 +6,7 @@
       <FormulateInput type="text" label="First Name" name="firstName" />
       <FormulateInput type="text" label="Last Name" name="LastName" />
     </FormulateForm>
-    <v-btn @click="submitForm">Submit</v-btn>
+    <v-btn color="primary" outlined @click="submitForm">Continue</v-btn>
   </div>
 </template>
 

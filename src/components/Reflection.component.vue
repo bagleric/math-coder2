@@ -11,7 +11,7 @@
         <v-icon>mdi-chevron-left</v-icon>
         Previous
       </v-btn>
-      <v-btn text class="next" @click="incrementIter()">
+      <v-btn outlined class="next" @click="incrementIter()">
         <span v-if="iter + 1 < reflections.length">Next</span>
         <span v-else>Done</span>
         <v-icon>mdi-chevron-right</v-icon>
@@ -78,6 +78,7 @@ export default {
   grid-area: controls;
   grid-auto-flow: column;
   justify-content: end;
+  margin: 0 1em 1em;
 }
 
 .previous,

@@ -2,7 +2,9 @@
   <div class="activities">
     <span v-if="!c_iter || c_iter < 0">
       <h1>Welcome</h1>
-      <v-btn @click="incrementIter()">Start Activity</v-btn>
+      <v-btn color="primary" outlined @click="incrementIter()"
+        >Start Activity</v-btn
+      >
     </span>
     <AppActivity
       v-else-if="c_iter < activities.length"
@@ -13,6 +15,8 @@
     <span v-else>
       <span> Well done! You finished the module.</span>
       <v-btn
+        color="primary"
+        outlined
         :to="{ name: 'PostActivity', params: { moduleId: this.moduleId } }"
       >
         Continue

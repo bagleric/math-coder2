@@ -10,6 +10,8 @@
     </span> -->
     <!-- TODO: add premodule quiz -->
     <v-btn
+      color="primary"
+      outlined
       :to="{
         name: 'PreActivity',
         params: { moduleId },

@@ -9,7 +9,10 @@
     <div class="complete-view" v-else>
       <h1 class="title">Activities complete</h1>
       <h2>Well done, you've completed all of the activities.</h2>
-      <v-btn :to="{ name: 'PostActivity', params: { moduleId } }"
+      <v-btn
+        outlined
+        color="primary"
+        :to="{ name: 'PostActivity', params: { moduleId } }"
         >Continue</v-btn
       >
     </div>

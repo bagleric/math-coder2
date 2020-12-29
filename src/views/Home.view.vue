@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <v-card :to="{ name: 'Modules' }">
+    <v-card outlined color="primary" :to="{ name: 'Modules' }">
       <v-card-title>Modules</v-card-title>
     </v-card>
   </div>
