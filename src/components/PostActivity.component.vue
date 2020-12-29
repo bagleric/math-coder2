@@ -57,7 +57,7 @@ export default {
   methods: {
     processForm() {
       //TODO: submit this information to the database.
-      this.$router.push({ name: "Home" });
+      this.$router.push({ name: "Goodbye" });
     },
     formComplete(data) {
       console.log({ data });

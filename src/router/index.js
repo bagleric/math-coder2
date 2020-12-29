@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import ViewHello from "../views/Hello.view.vue";
+import ViewGoodbye from "../views/Goodbye.view.vue";
 import ViewHome from "../views/Home.view.vue";
 // import ViewActivity from "../views/Activity.view.vue";
 // import store from "@/forms/module.199e4bb2-04d1-4a95-9965-d74c259e17fc.json";
@@ -134,8 +135,23 @@ const routes = [
   //   component: () =>
   //     import(/* webpackChunkName: "about" */ "../views/About.view.vue")
   // },
+  {
+    path: "/thanks",
+    name: "Goodbye",
+    component: ViewGoodbye,
+    meta: {
+      breadcrumb: "Thanks"
+    },
+  },
+  // {
+  //   path: "/*",
+  //   name: "Unknown",
+  //   component: NotFound,
+  //   meta: {
+  //     breadcrumb: "Uh oh"
+  //   },
+  // },
 ];
-
 const router = new VueRouter({
   routes,
   mode: "history"
