@@ -1,6 +1,28 @@
 <template>
   <div class="pre-activity">
+    <div class="instruction-container" v-if="showInstructions">
+      <h1 class="title">Pre-test instructions</h1>
+      <div class="instructions">
+        <v-icon x-large color="primary">mdi-account</v-icon>
+        <span>
+          You should do this test by yourself
+        </span>
+        <v-icon x-large color="primary">mdi-file-edit-outline</v-icon>
+        <span>You can use scratch paper to find your answers</span>
+        <v-icon x-large color="primary">mdi-account-question-outline</v-icon>
+        <span>
+          If you don't know the answer, that's okay. You can go to the next
+          question.
+        </span>
+        <v-icon x-large color="primary">mdi-clock-outline</v-icon>
+        <span> You can have as much time as you need.</span>
+      </div>
+      <v-btn outlined color="primary" @click="completeInstructions()"
+        >Start</v-btn
+      >
+    </div>
     <AppForm
+      v-else
       :inputs="theModule.preModule.inputs"
       :results="theModule.preModule.results"
       :stepper="true"
@@ -20,6 +42,9 @@ export default {
   props: {
     moduleId: { required: true, type: String },
   },
+  data: () => ({
+    showInstructions: true,
+  }),
   computed: {
     theModule() {
       let moduleId = this.moduleId;
@@ -44,6 +69,9 @@ export default {
       console.log({ data });
       this.processForm();
     },
+    completeInstructions() {
+      this.showInstructions = false;
+    },
   },
 };
 </script>
@@ -54,5 +82,17 @@ export default {
   padding: 2em;
   max-width: 40em;
   margin: 0 auto;
+}
+
+.instructions {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  margin: 1em;
+  align-items: center;
+}
+.instruction-container {
+  display: grid;
+  justify-items: center;
 }
 </style>
