@@ -126,6 +126,7 @@ export default {
 .view {
   border: solid 1px grey;
   grid-area: view;
+  padding: 1em;
 }
 
 .view-header {

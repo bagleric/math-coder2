@@ -2,21 +2,7 @@
   <div class="pre-activity">
     <div class="instruction-container" v-if="showInstructions">
       <h1 class="title">Pre-test instructions</h1>
-      <div class="instructions">
-        <v-icon x-large color="primary">mdi-account</v-icon>
-        <span>
-          You should do this test by yourself
-        </span>
-        <v-icon x-large color="primary">mdi-file-edit-outline</v-icon>
-        <span>You can use scratch paper to find your answers</span>
-        <v-icon x-large color="primary">mdi-account-question-outline</v-icon>
-        <span>
-          If you don't know the answer, that's okay. You can go to the next
-          question.
-        </span>
-        <v-icon x-large color="primary">mdi-clock-outline</v-icon>
-        <span> You can have as much time as you need.</span>
-      </div>
+      <AppTestInstructions></AppTestInstructions>
       <v-btn outlined color="primary" @click="completeInstructions()"
         >Start</v-btn
       >
@@ -35,10 +21,11 @@
 <script>
 import store from "@/forms/module.199e4bb2-04d1-4a95-9965-d74c259e17fc.json";
 import AppForm from "@/components/Form.component.vue";
+import AppTestInstructions from "@/components/TestInstructions.component.vue";
 
 export default {
   name: "PreActivity",
-  components: { AppForm },
+  components: { AppForm, AppTestInstructions },
   props: {
     moduleId: { required: true, type: String },
   },
@@ -84,13 +71,6 @@ export default {
   margin: 0 auto;
 }
 
-.instructions {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1em;
-  margin: 1em;
-  align-items: center;
-}
 .instruction-container {
   display: grid;
   justify-items: center;
