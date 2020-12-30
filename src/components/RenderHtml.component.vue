@@ -16,6 +16,7 @@ export default {
       allowedAttributes: {
         ...defaults.allowedAttributes,
         define: ["word"],
+        div: ["style"],
       },
     });
 
